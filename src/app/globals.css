@@ -13,6 +13,13 @@
   --color-soft-surface: var(--soft-surface);
   --color-gray: var(--gray);
   --color-graphite: var(--graphite);
+  --container-padding: 1rem;
+}
+
+@layer base {
+  .container {
+    padding-inline: var(--container-padding);
+  }
 }
 
 * {

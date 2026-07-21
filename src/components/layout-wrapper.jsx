@@ -8,12 +8,12 @@ export default function LayoutWrapper({ lang, children }) {
     return (
         <>
             <AppHeader lang={ lang } />
-            <main>
+            <main className="grow">
                 <TanstackProvider>
                     { children }
                 </TanstackProvider>
             </main>
-            <AppFooter />
+            <AppFooter lang={ lang } />
         </>
     );
 }
