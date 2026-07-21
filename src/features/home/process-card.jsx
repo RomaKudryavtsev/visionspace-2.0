@@ -24,6 +24,7 @@ export default function ProcessCard({ title, description, icon, index }) {
                     alt={ title }
                     width={ 30 }
                     height={ 30 }
+                    style={ { width: 'auto', height: 'auto' } }
                 />
             </div>
         </div>

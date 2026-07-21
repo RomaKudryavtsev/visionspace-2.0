@@ -11,6 +11,7 @@ function InnerServiceTile({ title, icon, isLast }) {
                     alt={ title }
                     width={ 20 }
                     height={ 20 }
+                    style={ { width: 'auto', height: 'auto' } }
                 />
             </div>
             <p className="text-primary font-medium">{ title }</p>
@@ -26,6 +27,7 @@ function TodoServiceTile({ title, checked, percent, isLast }) {
                 alt={ checked ? "checked" : "unchecked" }
                 width={ 18 }
                 height={ 18 }
+                style={ { width: 'auto', height: 'auto' } }
             />
             <div className="flex justify-between w-full items-center">
                 <p className="text-primary font-medium">{ title }</p>
@@ -50,6 +52,7 @@ function ServiceContent({ code, lang }) {
                                     alt="percent up"
                                     width={ 16 }
                                     height={ 16 }
+                                    style={ { width: 'auto', height: 'auto' } }
                                 />
                                 <span className="text-p-green font-medium">32%</span>
                             </div>
@@ -61,6 +64,7 @@ function ServiceContent({ code, lang }) {
                         alt='lead_generation graph'
                         width={ 181 }
                         height={ 71 }
+                        style={ { width: 'auto', height: 'auto' } }
                     />
                 </div>
                 <div className="flex flex-col gap-2.5">
@@ -117,6 +121,7 @@ function ServiceContent({ code, lang }) {
                                             alt="star"
                                             width={ 14 }
                                             height={ 14 }
+                                            style={ { width: 'auto', height: 'auto' } }
                                         />
                                     ))
                                 }
@@ -129,6 +134,7 @@ function ServiceContent({ code, lang }) {
                         alt='reputation graph'
                         width={ 181 }
                         height={ 71 }
+                        style={ { width: 'auto', height: 'auto' } }
                     />
                 </div>
                 <div className="flex flex-col gap-2.5">

@@ -39,6 +39,7 @@ export default function HeroSection({ lang = 'ru' }) {
                     loading="eager"
                     priority
                     className="w-full h-auto max-w-231.25"
+                    style={ { width: 'auto', height: 'auto' } }
                 />
             </div>
         </section>
