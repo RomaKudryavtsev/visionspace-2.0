@@ -12,7 +12,7 @@ export default function ServiceCard({
     lang
 }) {
     return (
-        <div className="bg-white p-5 flex flex-col gap-3.5 rounded-xl w-100 min-h-124.5" style={ { boxShadow: '0px 4px 15px 0px #22262D0D' } }>
+        <div className="bg-white p-5 flex flex-col gap-3.5 rounded-xl w-100 min-h-127" style={ { boxShadow: '0px 4px 15px 0px #22262D0D' } }>
             <div className="flex gap-7.5">
                 <div
                     className="p-3.5 rounded-xl self-start"

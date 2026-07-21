@@ -52,7 +52,7 @@ export const en = {
             title: 'Lead Generation',
             description: 'We attract target customers and build a stable flow of inquiries and sales.',
             requests: 'Requests',
-            to_prev_month: 'compared to the previous month',
+            to_prev_month: 'vs previous month',
             targeting: 'Targeting and performance marketing',
             seo: 'SEO and content promotion',
             analytics: 'Automation and analytics'
