@@ -5,7 +5,7 @@ import { $t } from "@/utils/lang.utils";
 
 export default function HeroSection({ lang = 'ru' }) {
     return (
-        <section className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-6 py-16">
+        <section>
             {/* Left: text content */ }
             <div className="flex flex-col gap-6 lg:gap-8 max-w-xl min-w-0 shrink-0">
                 <h1 className="text-primary text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">

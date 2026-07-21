@@ -36,3 +36,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+
+section {
+  @apply container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-6 py-16;
+}
