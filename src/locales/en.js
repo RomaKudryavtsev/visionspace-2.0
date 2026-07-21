@@ -17,5 +17,9 @@ export const en = {
         about_company: 'About Company',
         privacy_policy: 'Privacy Policy',
         copyright: '© 2024 VisionSpace. All rights reserved.',
+    },
+    hero: {
+        title: 'Solving business growth challenges through technology and marketing',
+        subtitle: 'We create and scale digital products, attract customers, and increase revenue using data and strategy.',
     }
 }

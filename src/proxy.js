@@ -26,6 +26,11 @@ export function proxy(request) {
         return;
     }
 
+    // Skip Next.js internal paths (e.g. /ru/_next/image, /_next/static) regardless of locale prefix.
+    if (pathname.includes('/_next/')) {
+        return;
+    }
+
     const pathnameIsMissingLocale = i18n.locales.every(
         (locale) =>
             !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
@@ -39,9 +44,3 @@ export function proxy(request) {
         );
     }
 }
-
-export const config = {
-    matcher: [
-        String.raw`/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\..*).*)`,
-    ],
-};

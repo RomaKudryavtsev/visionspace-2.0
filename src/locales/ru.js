@@ -1,6 +1,6 @@
 export const ru = {
     common: {
-        discuss_project: 'Discuss project',
+        discuss_project: 'Обсудить проект',
     },
     menu: {
         about_us: 'О нас',
@@ -17,5 +17,9 @@ export const ru = {
         about_company: 'О компании',
         privacy_policy: 'Политика конфиденциальности',
         copyright: '© 2024 VisionSpace. Все права защищены.',
+    },
+    hero: {
+        title: 'Решаем задачи роста бизнеса через технологии и маркетинг',
+        subtitle: 'Создаем и масштабируем digital-продукты, привлекаем клиентов и увеличиваем прибыль с помощью данных и стратегии.',
     }
 }
