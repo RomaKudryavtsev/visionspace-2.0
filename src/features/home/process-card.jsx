@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function ProcessCard({ title, description, icon, index }) {
     return (
         <div
-            className="p-5 flex flex-col gap-6 rounded-lg w-77.5 min-h-68.5"
+            className="p-5 flex flex-col gap-6 rounded-lg w-77.5 min-h-77.5"
             style={ {
                 border: '1px solid transparent',
                 backgroundImage:
@@ -18,7 +18,7 @@ export default function ProcessCard({ title, description, icon, index }) {
                 <p className="text-white font-semibold text-3xl ">{ title }</p>
                 <p className="text-gray text-lg">{ description }</p>
             </div>
-            <div className="rounded-md p-3 self-start" style={ { background: '#3158E81A' } }>
+            <div className="rounded-md p-3 self-start mt-auto" style={ { background: '#3158E81A' } }>
                 <Image
                     src={ icon }
                     alt={ title }
