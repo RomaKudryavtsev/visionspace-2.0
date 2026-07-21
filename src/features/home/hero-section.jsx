@@ -5,7 +5,7 @@ import { $t } from "@/utils/lang.utils";
 
 export default function HeroSection({ lang = 'ru' }) {
     return (
-        <section>
+        <section className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Left: text content */ }
             <div className="flex flex-col gap-6 lg:gap-8 max-w-xl min-w-0 shrink-0">
                 <h1 className="text-primary text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
@@ -21,10 +21,10 @@ export default function HeroSection({ lang = 'ru' }) {
                             <ArrowIcon />
                         </div>
                     </LinkButton>
-                    <LinkButton href="https://wa.me/YOUR_NUMBER" external>
+                    <LinkButton href="https://wa.me/YOUR_NUMBER" dark={ false }>
                         WhatsApp
                     </LinkButton>
-                    <LinkButton href="https://t.me/YOUR_HANDLE" external>
+                    <LinkButton href="https://t.me/YOUR_HANDLE" dark={ false }>
                         Telegram
                     </LinkButton>
                 </div>

@@ -7,7 +7,7 @@ import WhyUsSection from "@/features/home/why-us-section";
 
 export default function HomePage({ lang }) {
     return (
-        <div className="container mx-auto">
+        <div>
             <HeroSection lang={ lang } />
             <ServicesSection lang={ lang } />
             <ProcessSection lang={ lang } />

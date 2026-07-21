@@ -20,7 +20,7 @@ export default function AppHeader({ lang = 'ru' }) {
                     <li>
                         <Link
                             href={ `/${lang}/` }
-                            className="text-graphite"
+                            className="text-graphite hover:underline"
                         >
                             <span>{ $t('menu.about_us', lang) }</span>
                         </Link>
@@ -28,7 +28,7 @@ export default function AppHeader({ lang = 'ru' }) {
                     <li>
                         <Link
                             href={ `/${lang}/` }
-                            className="text-graphite"
+                            className="text-graphite hover:underline"
                         >
                             <span>{ $t('menu.lead_generation', lang) }</span>
                         </Link>
@@ -36,7 +36,7 @@ export default function AppHeader({ lang = 'ru' }) {
                     <li>
                         <Link
                             href={ `/${lang}/` }
-                            className="text-graphite"
+                            className="text-graphite hover:underline"
                         >
                             <span>{ $t('menu.development', lang) }</span>
                         </Link>
@@ -44,7 +44,7 @@ export default function AppHeader({ lang = 'ru' }) {
                     <li>
                         <Link
                             href={ `/${lang}/` }
-                            className="text-graphite"
+                            className="text-graphite hover:underline"
                         >
                             <span>{ $t('menu.reputation', lang) }</span>
                         </Link>
@@ -52,7 +52,7 @@ export default function AppHeader({ lang = 'ru' }) {
                     <li>
                         <Link
                             href={ `/${lang}/` }
-                            className="text-graphite"
+                            className="text-graphite hover:underline"
                         >
                             <span>{ $t('menu.faq', lang) }</span>
                         </Link>
