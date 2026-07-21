@@ -42,6 +42,7 @@ export const en = {
             wip: 'In Progress',
             analytics: 'Analytics and Prototype',
             ui: 'UI/UX Design',
+            develop: 'Development',
             tests: 'Testing'
         },
         reputation: {
@@ -49,9 +50,9 @@ export const en = {
             description: 'We build a strong brand and manage reputation so that customers trust and recommend us.',
             brand_rating: 'Brand Rating',
             based_on: 'based on 127 reviews',
-            review_management: 'Review and Mention Management',
+            reviews: 'Review and Mention Management',
             pr: 'PR and Media Promotion',
-            analytics: 'Reputation and Social Media Analytics',
+            soc_media: 'Reputation and Social Media Analytics',
         },
     }
 }

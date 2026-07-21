@@ -5,7 +5,8 @@
   --soft-surface: #F6F8FA;
   --gray: #7A8493;
   --graphite: #22262D;
-  --border-gray: #717375;
+  --border-gray: #cdcfd0;
+  --p-green: #22B573;
 }
 
 @theme inline {
@@ -15,6 +16,7 @@
   --color-gray: var(--gray);
   --color-graphite: var(--graphite);
   --color-border-gray: var(--border-gray);
+  --color-p-green: var(--p-green);
   --container-padding: 1rem;
 }
 

@@ -12,7 +12,7 @@ export default function ServiceCard({
     lang
 }) {
     return (
-        <div className="bg-white p-5 flex flex-col gap-3.5 rounded-xl w-100" style={ { boxShadow: '0px 4px 15px 0px #22262D0D' } }>
+        <div className="bg-white p-5 flex flex-col gap-3.5 rounded-xl w-100 min-h-124.5" style={ { boxShadow: '0px 4px 15px 0px #22262D0D' } }>
             <div className="flex gap-7.5">
                 <div
                     className="p-3.5 rounded-xl self-start"
@@ -31,10 +31,10 @@ export default function ServiceCard({
                     <span className="text-gray text-sm">{ description }</span>
                 </div>
             </div>
-            <div className="rounded-xl px-5 pt-3.5 pb-5" style={ { border: '1px solid #F6F8FA' } }>
+            <div className="rounded-xl px-5 pt-3.5 pb-2.5" style={ { border: '1px solid #F6F8FA' } }>
                 { content }
             </div>
-            { link && <LinkButton href={ link } dark={ false }>
+            { link && <LinkButton href={ link } dark={ false } className="mt-auto">
                 <div className="flex items-center justify-center gap-2.5">
                     <span className="text-graphite text-center">{ $t('common.details', lang) }</span>
                     <ArrowIcon dark />
