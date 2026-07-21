@@ -23,6 +23,28 @@ export const en = {
         title: 'Solving business growth challenges through technology and marketing',
         subtitle: 'We create and scale digital products, attract customers, and increase revenue using data and strategy.',
     },
+    process: {
+        title: 'Systematic Approach to Problem Solving',
+        subtitle: 'We establish a clear process where each stage delivers results and brings you closer to your goal.',
+        steps: {
+            analysis: {
+                title: 'Analysis',
+                description: 'We analyze the business, market, and growth opportunities'
+            },
+            strategy: {
+                title: 'Strategy',
+                description: 'We formulate a solution tailored to the task'
+            },
+            implementation: {
+                title: 'Implementation',
+                description: 'We launch marketing / development / reputation management'
+            },
+            optimization: {
+                title: 'Optimization',
+                description: 'We test, improve, and scale'
+            }
+        }
+    },
     services: {
         title: 'Three directions that address business growth challenges',
         subtitle: 'Comprehensive approach: we attract customers, create products, and strengthen brand trust. You get measurable results at every stage of growth.',
