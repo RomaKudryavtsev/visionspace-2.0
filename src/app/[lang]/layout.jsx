@@ -12,14 +12,16 @@ export const metadata = {
   description: "VisionSpace - leads generation, software development, and reputation management for businesses and individuals.",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
+    const { lang } = await params;
+
   return (
     <html
       lang="en"
       className={ `${manrope.variable} h-full antialiased` }
     >
       <body className="min-h-full flex flex-col">
-        <LayoutWrapper>
+        <LayoutWrapper lang={ lang }>
           { children }
         </LayoutWrapper>
       </body>

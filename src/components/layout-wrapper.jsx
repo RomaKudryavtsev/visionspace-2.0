@@ -4,10 +4,10 @@ import AppHeader from "./app-header";
 import AppFooter from "./app-footer";
 import TanstackProvider from "@/providers/query-provider";
 
-export default function LayoutWrapper({ children }) {
+export default function LayoutWrapper({ lang, children }) {
     return (
         <>
-            <AppHeader />
+            <AppHeader lang={ lang } />
             <main>
                 <TanstackProvider>
                     { children }

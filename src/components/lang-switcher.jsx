@@ -10,8 +10,8 @@ export default function LangSwitcher({ lang = "ru", className = "" }) {
     const router = useRouter();
 
     const languages = useMemo(() => ([
-        { code: 'ru', label: 'Русский', shortLabel: 'RU' },
         { code: 'en', label: 'English', shortLabel: 'EN' },
+        { code: 'ru', label: 'Русский', shortLabel: 'RU' },
     ]), []);
 
     useEffect(() => {
@@ -65,7 +65,7 @@ export default function LangSwitcher({ lang = "ru", className = "" }) {
                 aria-label="Select language"
                 aria-haspopup="listbox"
                 aria-expanded={ isOpen }
-                className="inline-flex h-9 min-w-18 items-center justify-between gap-2 rounded-full border border-gray/25 bg-white px-3 text-xs font-semibold tracking-wide text-primary transition-colors duration-200 hover:bg-gray/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20"
+                className="inline-flex h-9 min-w-18 items-center justify-between gap-2 rounded-full bg-white px-3 text-xs font-semibold tracking-wide text-primary transition-colors duration-200 hover:bg-gray/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20"
             >
                 <span>{ selectedLanguage.shortLabel }</span>
                 <span

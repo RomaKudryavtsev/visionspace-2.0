@@ -1,5 +1,12 @@
 export const en = {
-    home: {
-        title: "Home",
+    common: {
+        discuss_project: 'Discuss project',
+    },
+    menu: {
+        about_us: 'About Us',
+        lead_generation: 'Lead Generation',
+        development: 'Development',
+        reputation: 'Reputation',
+        faq: 'FAQ',
     }
 }

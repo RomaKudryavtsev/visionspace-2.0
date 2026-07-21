@@ -1,5 +1,5 @@
-import { locale as en } from '@/locales/en';
-import { locale as ru } from '@/locales/ru';
+import { en } from '@/locales/en';
+import { ru } from '@/locales/ru';
 
 export const $t = (key, lang = 'en') => {
     const translations = { en, ru };
