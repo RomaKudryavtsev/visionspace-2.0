@@ -76,5 +76,33 @@ export const en = {
             pr: 'PR and Media Promotion',
             soc_media: 'Reputation and Social Media Analytics',
         },
+    },
+    results: {
+        what_you_get: "What you get",
+        result: "Not services - results for the business",
+        description: "We combine marketing, technology, and analytics to deliver measurable growth, control, and scalability for businesses.",
+        metrics: {
+            client_growth: {
+                title: "Client Growth",
+                description: "Stable flow of inquiries and sales",
+                requests: "Requests",
+            },
+            control: {
+                title: "Control",
+                description: "Transparent analytics and predictable results",
+                roi: "ROI by projects",
+            },
+            systematic: {
+                title: "Systematic Approach",
+                description: "Processes that work without chaos",
+                completion: "Process Completion",
+            },
+            scalability: {
+                title: "Scalability",
+                description: "Ability to grow without losing efficiency",
+                turnover: "Revenue Growth",
+                for_6_months: "in 6 months",
+            }
+        }
     }
 }
