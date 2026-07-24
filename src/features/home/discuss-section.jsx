@@ -107,7 +107,7 @@ export default function DiscussSection({ lang }) {
               </h2>
               <p className="text-graphite text-lg">{ $t('discuss.description', lang) }</p>
             </div>
-            <LinkButton href="#contact" className="self-start">
+            <LinkButton href={`/${lang}/discuss`} className="self-start">
               <div className="flex items-center gap-2.5">
                 <span className="text-white">{ $t('common.discuss_project', lang) }</span>
                 <ArrowIcon />

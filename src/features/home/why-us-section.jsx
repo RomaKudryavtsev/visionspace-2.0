@@ -44,7 +44,7 @@ export default function WhyUsSection({ lang }) {
                     <div className="relative z-10 h-full flex flex-col p-7.5">
                         <div className="mt-auto flex flex-col gap-5">
                             <span className="text-2xl font-semibold text-white">{ $t('why_us.banner', lang) }</span>
-                            <LinkButton href="/" dark={ false } className="self-start">
+                            <LinkButton href={ `/${lang}/discuss` } dark={ false } className="self-start">
                                 <div className="flex items-center gap-2.5">
                                     <span className="text-primary">{ $t('common.discuss_project', lang) }</span>
                                     <ArrowIcon dark />

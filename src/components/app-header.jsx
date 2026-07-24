@@ -61,7 +61,7 @@ export default function AppHeader({ lang = 'ru' }) {
             </div>
             <div className="flex items-center gap-6">
                 <LangSwitcher lang={ lang } />
-                <LinkButton href={ `/${lang}/` }>
+                <LinkButton href={ `/${lang}/discuss` }>
                     <div className="flex items-center gap-2.5">
                         <span className="text-white">{ $t('common.discuss_project', lang) }</span>
                         <ArrowIcon />

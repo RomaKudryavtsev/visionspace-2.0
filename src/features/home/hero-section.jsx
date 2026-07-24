@@ -15,7 +15,7 @@ export default function HeroSection({ lang = 'ru' }) {
                     { $t('hero.subtitle', lang) }
                 </p>
                 <div className="flex flex-wrap items-center gap-5">
-                    <LinkButton href="#contact">
+                    <LinkButton href={ `/${lang}/discuss` }>
                         <div className="flex items-center gap-2.5">
                             <span className="text-white">{ $t('common.discuss_project', lang) }</span>
                             <ArrowIcon />
