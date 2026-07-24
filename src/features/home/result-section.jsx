@@ -14,7 +14,7 @@ function ResultContent({ result, lang }) {
                     </div>
                 </div>
                 <Image
-                    src="/client_growth.svg"
+                    src="/client_growth_chart.svg"
                     alt="Client Growth"
                     width={ 176 }
                     height={ 93 }
@@ -27,7 +27,7 @@ function ResultContent({ result, lang }) {
             <div className="flex justify-between items-center">
                 <span className="text-primary font-medium w-30">{ $t('results.metrics.systematic.completion', lang) }</span>
                 <Image
-                    src="/systematic.svg"
+                    src="/systematic_chart.svg"
                     alt="Systematic"
                     width={ 93 }
                     height={ 93 }
@@ -50,7 +50,7 @@ function ResultContent({ result, lang }) {
                         </div>
                     </div>
                     <Image
-                        src="/control.svg"
+                        src="/control_chart.svg"
                         alt="Control"
                         width={ 142 }
                         height={ 64 }
@@ -74,7 +74,7 @@ function ResultContent({ result, lang }) {
                         </div>
                     </div>
                     <Image
-                        src="/scalability.svg"
+                        src="/scalability_chart.svg"
                         alt="Scalability"
                         width={ 142 }
                         height={ 64 }
@@ -108,7 +108,7 @@ export default function ResultSection({ lang }) {
                                 key={ result }
                                 title={ $t(`results.metrics.${result}.title`, lang) }
                                 description={ $t(`results.metrics.${result}.description`, lang) }
-                                icon={ `/${result}_icon.svg` }
+                                icon={ `/${result}.svg` }
                                 content={ <ResultContent result={ result } lang={ lang } /> }
                             />
                         ))

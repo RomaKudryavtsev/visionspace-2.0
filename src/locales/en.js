@@ -104,5 +104,29 @@ export const en = {
                 for_6_months: "in 6 months",
             }
         }
+    },
+    why_us: {
+        badge: "Why Us",
+        title: "An Approach That Delivers Results",
+        description: "We combine strategy, creativity, and technology to ensure your business grows sustainably and predictably.",
+        banner: "Start by analyzing your current customer acquisition system",
+        reasons: {
+            systematic: {
+                title: "Systematic Thinking",
+                description: "We work not by tasks, but by business results"
+            },
+            client_growth: {
+                title: "Strong Team",
+                description: "Marketing + Development + Analytics"
+            },
+            production: {
+                title: "Production Experience",
+                description: "Real projects, not theory"
+            },
+            partners: {
+                title: "Partnership",
+                description: "We immerse ourselves in the business and think together with you"
+            }
+        }
     }
 }
