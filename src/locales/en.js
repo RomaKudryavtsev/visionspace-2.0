@@ -131,6 +131,22 @@ export const en = {
     },
     discuss: {
         title: "Discuss Your Task",
-        description: "We will conduct a preliminary analysis and propose a solution for your business."
+        description: "We will conduct a preliminary analysis and propose a solution for your business.",
+        discuss_analysis: {
+            title: "Analysis",
+            description: "We dive into your business, market, and audience.",
+        },
+        discuss_growth: {
+            title: "Growth",
+            description: "We scale results and amplify impact.",
+        },
+        discuss_solution: {
+            title: "Solution",
+            description: "We design the solution and implementation plan.",
+        },
+        discuss_strategy: {
+            title: "Strategy",
+            description: "We formulate the growth strategy and priorities."
+        }
     }
 }

@@ -42,16 +42,10 @@ function useIsDesktop(breakpoint = 640) {
   return isDesktop;
 }
 
-function StepFlow({ steps: stepsProp }) {
+function StepFlow({ lang }) {
   const isDesktop = useIsDesktop();
 
-  const steps =
-    stepsProp || [
-      { icon: null, title: "", description: "" },
-      { icon: null, title: "", description: "" },
-      { icon: null, title: "", description: "" },
-      { icon: null, title: "", description: "" },
-    ];
+  const steps = ['discuss_analysis', 'discuss_strategy', 'discuss_solution', 'discuss_growth'];
 
   return (
     <div className="relative grow">
@@ -72,15 +66,19 @@ function StepFlow({ steps: stepsProp }) {
             className={ `relative ${isLast ? "mb-0" : "mb-10"}` }
             style={ itemStyle }
           >
-            <DiscussCard { ...step } />
+            <DiscussCard
+              icon={ `/${step}.svg` }
+              title={ $t(`discuss.${step}.title`, lang) }
+              description={ $t(`discuss.${step}.description`, lang) }
+            />
             { !isLast && (
-                <div className="absolute top-full h-10 w-0" style={connectorStyle}>
-                  <span className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-1 bg-white rounded-full shadow-sm" />
-                  {/* мягкое голубое свечение — два размытых слоя для плавного затухания */}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-14 h-14 rounded-full bg-blue-500/20 blur-xl" />
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-9 h-9 rounded-full bg-blue-500/50 blur-md" />
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 w-4 h-4 rounded-full bg-white border-4 border-blue-600" />
-                </div>
+              <div className="absolute top-full h-10 w-0" style={ connectorStyle }>
+                <span className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-1 bg-white rounded-full shadow-sm" />
+                {/* мягкое голубое свечение — два размытых слоя для плавного затухания */ }
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-14 h-14 rounded-full bg-blue-500/20 blur-xl" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-9 h-9 rounded-full bg-blue-500/50 blur-md" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 w-4 h-4 rounded-full bg-white border-4 border-blue-600" />
+              </div>
 
             ) }
           </div>
@@ -116,7 +114,7 @@ export default function DiscussSection({ lang }) {
               </div>
             </LinkButton>
           </div>
-          <StepFlow />
+          <StepFlow lang={ lang } />
         </div>
       </section>
     </div>
