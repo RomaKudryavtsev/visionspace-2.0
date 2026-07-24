@@ -6,7 +6,7 @@ export default function DiscussCard({ icon, title, description }) {
             className="bg-white rounded-xl p-3.5 flex gap-3.5"
             style={ { border: '1px solid #F6F8FA', boxShadow: '0px 4px 15px 0px #22262D0D' } }
         >
-            <div className="bg-soft-surface rounded-md p-2.5">
+            <div className="bg-soft-surface rounded-md p-2.5 self-start">
                 <Image
                     src={ icon }
                     alt={ title }
