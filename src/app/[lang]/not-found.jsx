@@ -1,5 +1,5 @@
-import I18nNotFound from "@/features/not-found/i18n-not-found";
+import NotFoundPage from "@/views/404";
 
 export default async function NotFound() {
-    return <I18nNotFound />;
+    return <NotFoundPage />;
 }

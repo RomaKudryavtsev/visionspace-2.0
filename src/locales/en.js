@@ -148,5 +148,10 @@ export const en = {
             title: "Strategy",
             description: "We formulate the growth strategy and priorities."
         }
+    },
+    not_found: {
+        title: "Страница не найдена",
+        message: "К сожалению, запрашиваемая страница не существует.",
+        home_button: "Вернуться на главную",
     }
 }
