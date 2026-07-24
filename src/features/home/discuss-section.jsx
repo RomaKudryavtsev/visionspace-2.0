@@ -1,30 +1,16 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import LinkButton from "@/components/link-button";
+import ArrowIcon from "@/components/arrow-icon";
+import DiscussCard from "./discuss-card";
 import { $t } from "@/utils/lang.utils";
 
-/**
- * StepFlow (Tailwind) — диагональная цепочка карточек с коннекторами.
- *
- * Вся статичная стилистика (цвета, тени, радиусы, типографика) — обычные
- * классы Tailwind. Единственное, что остаётся инлайн-стилями — это
- * реально вычисляемые на лету числа (отступ слева и позиция точки
- * коннектора), потому что это проценты + calc() под конкретный индекс
- * карточки, а не что-то из фиксированной шкалы Tailwind.
- *
- * Крутилки — константы ниже:
- *  - CARD_WIDTH_PCT   — ширина карточки, % от контейнера
- *  - TRACK_BASE_PCT   — стартовый отступ слева для двух "рельсов" (чёт/нечёт)
- *  - TRACK_STEP_PCT   — насколько дальше уезжает каждый следующий заход в тот же рельс
- *  - GAP_V            — вертикальный зазор между карточками (px, = Tailwind h-10)
- *  - ICON_INSET       — отступ точки от края нижней карточки (px, ~центр иконки)
- */
-
-const CARD_WIDTH_PCT = 48;
-const TRACK_BASE_PCT = [5, 33];
-const TRACK_STEP_PCT = 7;
-const GAP_V = 40; // держите равным высоте класса h-10 ниже
-const ICON_INSET = 42;
+const CARD_WIDTH_PCT = 50; // ширина карточки, % от контейнера
+const TRACK_BASE_PCT = [5, 33]; // стартовый отступ слева для двух "рельсов" (чёт/нечёт)
+const TRACK_STEP_PCT = 10; // насколько дальше уезжает каждый следующий заход в тот же рельс
+const ICON_INSET = 42; // отступ точки от края нижней карточки (px, ~центр иконки)
 
 function marginPct(index) {
   const track = index % 2;
@@ -56,41 +42,9 @@ function useIsDesktop(breakpoint = 640) {
   return isDesktop;
 }
 
-function StepCard({ icon, title, description }) {
-  const hasTitle = Boolean(title && title.trim());
-  const hasDesc = Boolean(description && description.trim());
-
-  return (
-    <div className="flex items-start gap-4 bg-white rounded-2xl px-6 py-5 shadow-xl">
-      <div className="flex-none w-11 h-11 rounded-xl bg-slate-100 flex items-center justify-center text-slate-900">
-        {icon}
-      </div>
-      <div className="flex-1 min-w-0 pt-0.5">
-        {hasTitle ? (
-          <h3 className="text-xl font-semibold text-slate-900 mb-2 leading-snug">
-            {title}
-          </h3>
-        ) : (
-          <div className="w-1/2 h-5 bg-slate-200 rounded mb-2" aria-hidden="true" />
-        )}
-
-        {hasDesc ? (
-          <p className="text-sm text-slate-500 leading-relaxed">{description}</p>
-        ) : (
-          <>
-            <div className="w-11/12 h-3 bg-slate-200 rounded mt-2" aria-hidden="true" />
-            <div className="w-2/3 h-3 bg-slate-200 rounded mt-2" aria-hidden="true" />
-          </>
-        )}
-      </div>
-    </div>
-  );
-}
-
 function StepFlow({ steps: stepsProp }) {
   const isDesktop = useIsDesktop();
 
-  // Пустые карточки — заполните icon/title/description сами.
   const steps =
     stepsProp || [
       { icon: null, title: "", description: "" },
@@ -100,45 +54,71 @@ function StepFlow({ steps: stepsProp }) {
     ];
 
   return (
-    <div className="p-10 sm:p-14 bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200">
-      <div className="relative max-w-2xl mx-auto">
-        {steps.map((step, i) => {
-          const isLast = i === steps.length - 1;
+    <div className="relative grow">
+      { steps.map((step, i) => {
+        const isLast = i === steps.length - 1;
 
-          const itemStyle = isDesktop
-            ? { width: `${CARD_WIDTH_PCT}%`, marginLeft: `${marginPct(i)}%` }
-            : { width: "100%", marginLeft: 0 };
+        const itemStyle = isDesktop
+          ? { width: `${CARD_WIDTH_PCT}%`, marginLeft: `${marginPct(i)}%` }
+          : { width: "100%", marginLeft: 0 };
 
-          const connectorStyle = isDesktop
-            ? { left: connectorLeft(i) }
-            : { left: `${ICON_INSET}px` };
+        const connectorStyle = isDesktop
+          ? { left: connectorLeft(i) }
+          : { left: `${ICON_INSET}px` };
 
-          return (
-            <div
-              key={i}
-              className={`relative ${isLast ? "mb-0" : "mb-10"}`}
-              style={itemStyle}
-            >
-              <StepCard {...step} />
-
-              {!isLast && (
+        return (
+          <div
+            key={ i }
+            className={ `relative ${isLast ? "mb-0" : "mb-10"}` }
+            style={ itemStyle }
+          >
+            <DiscussCard { ...step } />
+            { !isLast && (
                 <div className="absolute top-full h-10 w-0" style={connectorStyle}>
                   <span className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-1 bg-white rounded-full shadow-sm" />
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 w-4 h-4 rounded-full bg-white border-4 border-blue-600 ring-8 ring-blue-100" />
+                  {/* мягкое голубое свечение — два размытых слоя для плавного затухания */}
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-14 h-14 rounded-full bg-blue-500/20 blur-xl" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-9 h-9 rounded-full bg-blue-500/50 blur-md" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 w-4 h-4 rounded-full bg-white border-4 border-blue-600" />
                 </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+
+            ) }
+          </div>
+        );
+      }) }
     </div>
   );
 }
 
 export default function DiscussSection({ lang }) {
-    return (
-        <section>
-          <StepFlow></StepFlow>
-        </section>
-    );
+  return (
+    <div className="bg-soft-surface w-full pt-20.5">
+      <section className="relative">
+        <Image
+          src="/discuss-bg.png"
+          alt="Discuss background"
+          fill
+          sizes="100vw"
+          className="object-cover object-center z-0"
+        />
+        <div className="relative z-10 flex justify-between items-center">
+          <div className="flex flex-col gap-10 w-128.5">
+            <div className="flex flex-col gap-3.5">
+              <h2 className="text-5xl font-semibold text-primary">
+                { $t('discuss.title', lang) }
+              </h2>
+              <p className="text-graphite text-lg">{ $t('discuss.description', lang) }</p>
+            </div>
+            <LinkButton href="#contact" className="self-start">
+              <div className="flex items-center gap-2.5">
+                <span className="text-white">{ $t('common.discuss_project', lang) }</span>
+                <ArrowIcon />
+              </div>
+            </LinkButton>
+          </div>
+          <StepFlow />
+        </div>
+      </section>
+    </div>
+  );
 }

@@ -128,5 +128,9 @@ export const en = {
                 description: "We immerse ourselves in the business and think together with you"
             }
         }
+    },
+    discuss: {
+        title: "Discuss Your Task",
+        description: "We will conduct a preliminary analysis and propose a solution for your business."
     }
 }
