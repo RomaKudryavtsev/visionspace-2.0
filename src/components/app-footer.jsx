@@ -4,14 +4,14 @@ import { $t } from '@/utils/lang.utils';
 
 export default function AppFooter({ lang = 'ru' }) {
     return (
-        <footer className="bg-soft-surface pt-12.5 pb-10">
-            <div className="container mx-auto flex flex-col gap-10">
+        <footer className="bg-soft-surface pt-10 lg:pt-12.5 pb-10">
+            <div className="container mx-auto flex flex-col gap-7.5 lg:gap-10">
                 {/* Info row */ }
-                <div className="flex flex-col lg:flex-row justify-between">
+                <div className="flex flex-col lg:flex-row gap-7.5 justify-between">
                     <div className="w-66">
                         <span>{ $t('footer.description', lang) }</span>
                     </div>
-                    <div className="flex flex-col lg:flex-row gap-5">
+                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-7.5">
                         {/* Services */ }
                         <div className="flex flex-col gap-5">
                             <span className="text-gray text-lg">{ $t('footer.services', lang) }</span>
@@ -77,7 +77,7 @@ export default function AppFooter({ lang = 'ru' }) {
                     </div>
                 </div>
                 {/* Logo row */ }
-                <div className="flex flex-col lg:flex-row justify-between items-center">
+                <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-3.5">
                     <Image
                         src="/logo-default.svg"
                         alt="VisionSpace Logo"
@@ -85,7 +85,6 @@ export default function AppFooter({ lang = 'ru' }) {
                         height={ 58 }
                     />
                     <span className="text-graphite">{ $t('footer.copyright', lang) }</span>
-
                 </div>
             </div>
         </footer>
