@@ -5,7 +5,7 @@ import { $t } from "@/utils/lang.utils";
 export default function ContactsCard({ lang }) {
     return (
         <div
-            className="bg-white rounded-xl px-7.5 py-6"
+            className="bg-white rounded-xl px-7.5 py-6 w-full"
             style={ { boxShadow: "0px 4px 15px 0px #22262D0D" } }
         >
             <div className="flex items-center justify-between gap-4">

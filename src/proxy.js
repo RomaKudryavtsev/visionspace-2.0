@@ -21,7 +21,7 @@ function getLocale(request) {
 export function proxy(request) {
     const pathname = request.nextUrl.pathname;
 
-     // Do not localize static/public files (e.g. /vector/*.svg, /images/*.png).
+    // Do not localize static/public files (e.g. /vector/*.svg, /images/*.png).
     if (PUBLIC_FILE.test(pathname)) {
         return;
     }
@@ -30,6 +30,12 @@ export function proxy(request) {
     if (pathname.includes('/_next/')) {
         return;
     }
+
+    // Skip API routes — they don't need locale prefixes.
+    if (pathname.startsWith('/api/')) {
+        return;
+    }
+
 
     const pathnameIsMissingLocale = i18n.locales.every(
         (locale) =>

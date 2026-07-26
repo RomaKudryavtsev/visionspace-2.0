@@ -41,8 +41,15 @@ body {
   overflow-x: hidden;
 }
 
-section {
+section:not([aria-label="Notifications alt+T"]) {
   @apply mx-auto max-w-7xl px-6 py-16;
+}
+
+/* Sonner toaster v2 — reset inherited section styles */
+section[aria-label="Notifications alt+T"] {
+  margin: 0;
+  max-width: none;
+  padding: 0;
 }
 
 .discuss-bg {
