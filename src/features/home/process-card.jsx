@@ -15,7 +15,7 @@ export default function ProcessCard({ title, description, icon, index }) {
         >
             <p className="text-gray font-semibold text-3xl">{ `0${index + 1}` }</p>
             <div className="flex flex-col gap-2.5">
-                <p className="text-white font-semibold text-3xl">{ title }</p>
+                <p className="text-white font-semibold text-2xl lg:text-3xl">{ title }</p>
                 <p className="text-gray text-lg">{ description }</p>
             </div>
             <div className="rounded-md p-3 self-start mt-auto" style={ { background: '#3158E81A' } }>
