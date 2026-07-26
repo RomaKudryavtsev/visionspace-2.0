@@ -68,7 +68,7 @@ export default function ProjectForm({ lang }) {
             className="grid gap-8 md:grid-cols-2 md:gap-6"
         >
             {/* Column 1 — direction */ }
-            <div className="flex flex-col gap-5 md:rounded-3xl md:border md:border-gray-200 md:bg-white md:p-8 md:shadow-sm">
+            <div className="flex flex-col gap-3.5 md:rounded-3xl md:border md:border-gray-200 md:bg-white md:p-8 md:shadow-sm">
                 <p className="text-lg text-primary">
                     1. { $t('project_form.step1_title', lang) }
                 </p>
@@ -119,7 +119,7 @@ export default function ProjectForm({ lang }) {
                                 }) }
                             </div>
                             {/* Mobile: pill tabs */ }
-                            <div className="flex rounded-full bg-gray-100 p-1 md:hidden">
+                            <div className="flex rounded-lg bg-white p-1 md:hidden">
                                 { DIRECTIONS.map((direction) => {
                                     const isSelected = field.value === direction.value;
                                     return (
@@ -128,7 +128,7 @@ export default function ProjectForm({ lang }) {
                                             type="button"
                                             onClick={ () => field.onChange(direction.value) }
                                             aria-pressed={ isSelected }
-                                            className={ `flex-1 rounded-full px-3 py-2 text-sm font-medium transition-colors ${isSelected ? 'bg-blue-600 text-white' : 'text-gray-600'
+                                            className={ `flex-1 rounded-sm p-3 text-sm font-medium transition-colors ${isSelected ? 'bg-[#3158E8] text-white' : 'text-primary'
                                                 }` }
                                         >
                                             { $t(direction.titleKey, lang) }
@@ -139,12 +139,12 @@ export default function ProjectForm({ lang }) {
                         </>
                     ) }
                 />
-                <div className="rounded-xl bg-soft-surface px-5 py-3.5 text-sm leading-snug text-primary font-medium">
+                <div className="hidden lg:block rounded-xl bg-soft-surface px-5 py-3.5 text-sm leading-snug text-primary font-medium">
                     { $t('project_form.hint', lang) }
                 </div>
             </div>
             {/* Column 2 — project details */ }
-            <div className="flex flex-col gap-5 md:rounded-3xl md:border md:border-gray-200 md:bg-white md:p-8 md:shadow-sm">
+            <div className="flex flex-col gap-3.5 lg:gap-5 md:rounded-3xl md:border md:border-gray-200 md:bg-white md:p-8 md:shadow-sm">
                 <p className="text-lg text-primary">
                     2. { $t('project_form.step2_title', lang) }
                 </p>
@@ -188,12 +188,12 @@ export default function ProjectForm({ lang }) {
 
 function Field({ label, placeholder, error, inputProps }) {
     return (
-        <label className="flex flex-col gap-2.5 text-sm text-gray font-medium">
+        <label className="flex flex-col gap-2.5 text-sm text-gray font-normal lg:font-medium">
             { label }
             <input
                 { ...inputProps }
                 placeholder={ placeholder }
-                className={ `rounded-sm border bg-soft-surface px-3.5 py-3 font-medium text-primary outline-none transition-colors placeholder:text-[#7A849366] focus:border-[#3158E8] focus:bg-white ${error ? 'border-red-400' : 'border-transparent'
+                className={ `rounded-sm border bg-white lg:bg-soft-surface px-3.5 py-3 font-medium text-primary outline-none transition-colors placeholder:text-[#7A849366] focus:border-[#3158E8] focus:bg-white ${error ? 'border-red-400' : 'border-transparent'
                     }` }
             />
         </label>
