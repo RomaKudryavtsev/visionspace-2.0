@@ -42,7 +42,7 @@ body {
 }
 
 section:not([aria-label="Notifications alt+T"]) {
-  @apply mx-auto max-w-7xl px-6 py-16;
+  @apply mx-auto max-w-7xl px-5 lg:px-6 py-8 lg:py-16;
 }
 
 /* Sonner toaster v2 — reset inherited section styles */

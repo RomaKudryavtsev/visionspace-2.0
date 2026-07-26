@@ -5,13 +5,13 @@ import { $t } from "@/utils/lang.utils";
 
 export default function HeroSection({ lang = 'ru' }) {
     return (
-        <section className="flex flex-col lg:flex-row items-center justify-between gap-12">
-            {/* Left: text content */ }
+        <section className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
+            {/* Text content */ }
             <div className="order-2 lg:order-1 flex flex-col gap-6 lg:gap-8 max-w-xl min-w-0 shrink-0">
-                <h1 className="text-primary text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
+                <h1 className="text-primary text-4xl lg:text-6xl font-semibold leading-tight">
                     { $t('hero.title', lang) }
                 </h1>
-                <p className="text-graphite text-lg sm:text-xl lg:text-2xl">
+                <p className="text-graphite text-lg lg:text-2xl">
                     { $t('hero.subtitle', lang) }
                 </p>
                 <div className="flex flex-col lg:flex-row lg:flex-wrap items-stretch lg:items-center gap-4 lg:gap-5 w-full">
@@ -21,8 +21,6 @@ export default function HeroSection({ lang = 'ru' }) {
                             <ArrowIcon />
                         </div>
                     </LinkButton>
-                    {/* On mobile these sit in a 2-col grid; on desktop `lg:contents`
-                        drops this wrapper so they flow inline with the button above */}
                     <div className="grid grid-cols-2 gap-4 lg:contents">
                         <LinkButton href="https://wa.me/YOUR_NUMBER" dark={ false } className="w-full lg:w-auto text-center">
                             WhatsApp
@@ -33,7 +31,7 @@ export default function HeroSection({ lang = 'ru' }) {
                     </div>
                 </div>
             </div>
-            {/* Right: image */ }
+            {/* Image */ }
             <div className="order-1 lg:order-2 w-full lg:flex-1 min-w-0 flex justify-center lg:block">
                 <Image
                     src="/image-hero.png"
