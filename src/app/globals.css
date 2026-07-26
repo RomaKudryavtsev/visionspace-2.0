@@ -44,3 +44,9 @@ body {
 section {
   @apply mx-auto max-w-7xl px-6 py-16;
 }
+
+.discuss-bg {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: url('/discuss-bg.png') center / cover no-repeat;
+}

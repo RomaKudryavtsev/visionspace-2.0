@@ -149,6 +149,11 @@ export const en = {
             description: "We formulate the growth strategy and priorities."
         }
     },
+    project_form: {
+        title: "Tell us about your business and get a personalized solution",
+        description: "Choose the direction that best suits your request and submit the information - we will contact you shortly.",
+        contacts_card: "We will get in touch with you within 24 hours and offer the optimal solution for your business and needs."
+    },
     not_found: {
         title: "Страница не найдена",
         message: "К сожалению, запрашиваемая страница не существует.",
