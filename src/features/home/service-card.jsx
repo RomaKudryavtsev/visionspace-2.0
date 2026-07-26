@@ -21,10 +21,16 @@ export default function ServiceCard({
                     className="p-3.5 rounded-xl self-start"
                     style={ { border: '1px solid #E3E7EC', background: 'linear-gradient(180deg, #FEFEFE 0%, #F4F4F4 100%)' } }
                 >
-                    <Image src={ icon } alt={ title } width={ 30 } height={ 30 } style={ { width: 'auto', height: 'auto' } } />
+                    <Image
+                        src={ icon }
+                        alt={ title }
+                        width={ 30 }
+                        height={ 30 }
+                        style={ { width: 'auto', height: 'auto' } }
+                    />
                 </div>
                 <div className="flex-1 lg:w-67.5 flex flex-col gap-0.5 min-w-0">
-                    <span className="text-primary text-2xl font-semibold">{ title }</span>
+                    <span className="text-primary text-xl lg:text-2xl font-normal lg:font-semibold">{ title }</span>
                     <span className="text-gray text-sm">{ description }</span>
                 </div>
             </div>

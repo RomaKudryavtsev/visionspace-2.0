@@ -42,19 +42,32 @@ function ServiceContent({ code, lang }) {
                     <div className="flex flex-col">
                         <span className="text-primary font-medium">{ $t('services.lead_generation.requests', lang) }</span>
                         <div className="flex gap-2.5 items-center">
-                            <span className="text-primary text-2xl font-semibold">1 248</span>
+                            <span className="text-primary text-xl lg:text-2xl font-normal lg:font-semibold">1 248</span>
                             <div className="flex items-center">
-                                <Image src="/percent-up.svg" alt="percent up" width={ 16 } height={ 16 } style={ { width: 'auto', height: 'auto' } } />
+                                <Image
+                                    src="/percent-up.svg"
+                                    alt="percent up"
+                                    width={ 16 }
+                                    height={ 16 }
+                                    style={ { width: 'auto', height: 'auto' } }
+                                />
                                 <span className="text-p-green font-medium">32%</span>
                             </div>
                         </div>
                         <span className="text-graphite text-xs">{ $t('services.lead_generation.to_prev_month', lang) }</span>
                     </div>
-                    <Image src='/graph-1.svg' alt='lead_generation graph' width={ 181 } height={ 71 } style={ { width: 'auto', height: 'auto' } } />
+                    <Image
+                        src='/graph-1.svg'
+                        alt='lead_generation graph'
+                        width={ 181 }
+                        height={ 71 }
+                        className="w-27.5 lg:w-45.25"
+                        style={ { height: 'auto' } }
+                    />
                 </div>
                 <div className="flex flex-col gap-2.5">
                     { ['targeting', 'seo', 'analytics'].map((item, index) => (
-                        <InnerServiceTile key={ index } title={ $t(`services.lead_generation.${item}`, lang) } icon={ `/${item}.svg` } isLast={ index === 2 } />
+                        <InnerServiceTile key={ index } title={ $t(`services.lead_generation.${item}`, lang) } icon={ `/${item}` + '.svg' } isLast={ index === 2 } />
                     )) }
                 </div>
             </div>
@@ -96,11 +109,18 @@ function ServiceContent({ code, lang }) {
                         </div>
                         <span className="text-graphite text-xs">{ $t('services.reputation.based_on', lang) }</span>
                     </div>
-                    <Image src='/graph-2.svg' alt='reputation graph' width={ 181 } height={ 71 } style={ { width: 'auto', height: 'auto' } } />
+                    <Image
+                        src='/graph-2.svg'
+                        alt='reputation graph'
+                        width={ 181 }
+                        height={ 71 }
+                        className="w-27.5 lg:w-45.25"
+                        style={ { height: 'auto' } }
+                    />
                 </div>
                 <div className="flex flex-col gap-2.5">
                     { ['reviews', 'pr', 'soc_media'].map((item, index) => (
-                        <InnerServiceTile key={ index } title={ $t(`services.reputation.${item}`, lang) } icon={ `/${item}.svg` } isLast={ index === 2 } />
+                        <InnerServiceTile key={ index } title={ $t(`services.reputation.${item}`, lang) } icon={ `/${item}` + '.svg' } isLast={ index === 2 } />
                     )) }
                 </div>
             </div>
@@ -108,7 +128,6 @@ function ServiceContent({ code, lang }) {
     }
     return null;
 }
-
 export default function ServicesSection({ lang }) {
     const services_codes = ['lead_generation', 'development', 'reputation'];
     const [activeIndex, setActiveIndex] = useState(0);
@@ -116,7 +135,7 @@ export default function ServicesSection({ lang }) {
     const cards = services_codes.map(code => ({
         title: $t(`services.${code}.title`, lang),
         description: $t(`services.${code}.description`, lang),
-        icon: `/${code}.svg`,
+        icon: `/${code}` + '.svg',
         link: `/${lang}/`,
         content: (<ServiceContent code={ code } lang={ lang } />),
     }));
@@ -126,11 +145,9 @@ export default function ServicesSection({ lang }) {
 
     return (
         <div className="bg-soft-surface w-full">
-            {/* No mx-auto / max-w-* / px-* / py-* here — the global `section` rule
-                already forces those and would win any specificity fight anyway. */}
             <section className="flex flex-col gap-5 items-center justify-center">
                 <div className="flex flex-col gap-3.5 items-center max-w-3xl">
-                    <h2 className="text-primary text-3xl sm:text-4xl lg:text-5xl font-semibold text-center">
+                    <h2 className="text-primary text-3xl lg:text-5xl font-semibold text-center">
                         { $t('services.title', lang) }
                     </h2>
                     <p className="text-graphite text-base lg:text-lg text-center">
