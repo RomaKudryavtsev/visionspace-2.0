@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function WhyUsCard({ title, description, icon }) {
     return (
         <div
-            className="bg-white rounded-xl p-7.5 gap-7.5 flex flex-col"
+            className="bg-white rounded-xl p-7.5 gap-5 lg:gap-7.5 flex flex-col"
             style={ { border: '1px solid #E3E7EC' } }
         >
             <div
@@ -18,7 +18,7 @@ export default function WhyUsCard({ title, description, icon }) {
                     style={ { width: 'auto', height: 'auto' } }
                 />
             </div>
-            <span className="text-3xl text-primary font-semibold">{ title }</span>
+            <span className="text-2xl lg:text-3xl text-primary font-normal lg:font-semibold">{ title }</span>
             <span className="text-gray text-lg">{ description }</span>
         </div>
     );
