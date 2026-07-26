@@ -7,30 +7,34 @@ export default function HeroSection({ lang = 'ru' }) {
     return (
         <section className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Left: text content */ }
-            <div className="flex flex-col gap-6 lg:gap-8 max-w-xl min-w-0 shrink-0">
+            <div className="order-2 lg:order-1 flex flex-col gap-6 lg:gap-8 max-w-xl min-w-0 shrink-0">
                 <h1 className="text-primary text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
                     { $t('hero.title', lang) }
                 </h1>
                 <p className="text-graphite text-lg sm:text-xl lg:text-2xl">
                     { $t('hero.subtitle', lang) }
                 </p>
-                <div className="flex flex-wrap items-center gap-5">
-                    <LinkButton href={ `/${lang}/discuss` }>
-                        <div className="flex items-center gap-2.5">
+                <div className="flex flex-col lg:flex-row lg:flex-wrap items-stretch lg:items-center gap-4 lg:gap-5 w-full">
+                    <LinkButton href={ `/${lang}/discuss` } className="w-full lg:w-auto">
+                        <div className="flex items-center justify-center gap-2.5">
                             <span className="text-white">{ $t('common.discuss_project', lang) }</span>
                             <ArrowIcon />
                         </div>
                     </LinkButton>
-                    <LinkButton href="https://wa.me/YOUR_NUMBER" dark={ false }>
-                        WhatsApp
-                    </LinkButton>
-                    <LinkButton href="https://t.me/YOUR_HANDLE" dark={ false }>
-                        Telegram
-                    </LinkButton>
+                    {/* On mobile these sit in a 2-col grid; on desktop `lg:contents`
+                        drops this wrapper so they flow inline with the button above */}
+                    <div className="grid grid-cols-2 gap-4 lg:contents">
+                        <LinkButton href="https://wa.me/YOUR_NUMBER" dark={ false } className="w-full lg:w-auto text-center">
+                            WhatsApp
+                        </LinkButton>
+                        <LinkButton href="https://t.me/YOUR_HANDLE" dark={ false } className="w-full lg:w-auto text-center">
+                            Telegram
+                        </LinkButton>
+                    </div>
                 </div>
             </div>
             {/* Right: image */ }
-            <div className="w-full lg:flex-1 min-w-0">
+            <div className="order-1 lg:order-2 w-full lg:flex-1 min-w-0 flex justify-center lg:block">
                 <Image
                     src="/image-hero.png"
                     alt="Hero Image"
@@ -38,8 +42,7 @@ export default function HeroSection({ lang = 'ru' }) {
                     height={ 776 }
                     loading="eager"
                     priority
-                    className="w-full h-auto max-w-231.25"
-                    style={ { width: 'auto', height: 'auto' } }
+                    className="w-83.75 h-70 object-cover lg:w-full lg:h-auto lg:max-w-231.25 lg:object-fill"
                 />
             </div>
         </section>

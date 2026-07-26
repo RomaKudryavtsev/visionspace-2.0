@@ -18,9 +18,9 @@ export default function WhyUsSection({ lang }) {
                 </h2>
                 <p className="text-graphite text-lg">{ $t('why_us.description', lang) }</p>
             </div>
-            <div className="w-full flex items-stretch gap-5">
+            <div className="w-full flex flex-col lg:flex-row items-stretch gap-5">
                 {/* 2x2 grid */ }
-                <div className="grid grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                     {
                         cards.map((card) => (
                             <WhyUsCard
@@ -33,7 +33,7 @@ export default function WhyUsSection({ lang }) {
                     }
                 </div>
                 {/* Banner */}
-                <div className="relative w-105 h-auto overflow-hidden rounded-xl">
+                <div className="relative w-full lg:w-105 h-auto overflow-hidden rounded-xl">
                     <Image
                         src="/why_us_banner.png"
                         alt="Why Us Banner"

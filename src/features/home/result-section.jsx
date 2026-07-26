@@ -92,8 +92,8 @@ export default function ResultSection({ lang }) {
 
     return (
         <div className="bg-soft-surface w-full">
-            <section className="flex gap-5 items-center justify-center">
-                <div className="flex flex-col gap-3.5 w-132.5">
+            <section className="flex flex-col lg:flex-row gap-5 items-center justify-center">
+                <div className="flex flex-col gap-3.5 lg:w-132.5">
                     <div className="py-2.5 px-3 bg-white rounded-sm self-start">
                         <span className="font-medium text-graphite">{ $t("results.what_you_get", lang) }</span>
                     </div>
@@ -101,7 +101,7 @@ export default function ResultSection({ lang }) {
                     <p className="text-graphite text-lg">{ $t("results.description", lang) }</p>
                 </div>
                 {/* 2x2 grid */ }
-                <div className="grid grid-cols-2 gap-5">
+                <div className="grid grid-col-1 lg:grid-cols-2 gap-5">
                     {
                         results.map((result) => (
                             <ResultCard

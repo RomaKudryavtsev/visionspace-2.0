@@ -7,11 +7,11 @@ export default function AppFooter({ lang = 'ru' }) {
         <footer className="bg-soft-surface pt-12.5 pb-10">
             <div className="container mx-auto flex flex-col gap-10">
                 {/* Info row */ }
-                <div className="flex justify-between">
+                <div className="flex flex-col lg:flex-row justify-between">
                     <div className="w-66">
                         <span>{ $t('footer.description', lang) }</span>
                     </div>
-                    <div className="flex gap-5">
+                    <div className="flex flex-col lg:flex-row gap-5">
                         {/* Services */ }
                         <div className="flex flex-col gap-5">
                             <span className="text-gray text-lg">{ $t('footer.services', lang) }</span>
@@ -77,7 +77,7 @@ export default function AppFooter({ lang = 'ru' }) {
                     </div>
                 </div>
                 {/* Logo row */ }
-                <div className="flex justify-between items-center">
+                <div className="flex flex-col lg:flex-row justify-between items-center">
                     <Image
                         src="/logo-default.svg"
                         alt="VisionSpace Logo"

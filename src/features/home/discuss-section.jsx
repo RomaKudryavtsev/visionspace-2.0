@@ -99,8 +99,8 @@ export default function DiscussSection({ lang }) {
           sizes="100vw"
           className="object-cover object-center z-0"
         />
-        <div className="relative z-10 flex justify-between items-center">
-          <div className="flex flex-col gap-10 w-128.5">
+        <div className="relative z-10 flex-col lg:flex-row justify-between items-center">
+          <div className="flex flex-col gap-10 lg:w-128.5">
             <div className="flex flex-col gap-3.5">
               <h2 className="text-5xl font-semibold text-primary">
                 { $t('discuss.title', lang) }

@@ -2,6 +2,7 @@
 
 import AppHeader from "./app-header";
 import AppFooter from "./app-footer";
+import AppMenu from "./app-menu";
 import TanstackProvider from "@/providers/query-provider";
 import { Toaster } from 'sonner';
 export default function LayoutWrapper({ lang, children }) {
@@ -14,6 +15,7 @@ export default function LayoutWrapper({ lang, children }) {
                 </TanstackProvider>
             </main>
             <AppFooter lang={ lang } />
+            <AppMenu lang={ lang } />
             <Toaster />
         </>
     );

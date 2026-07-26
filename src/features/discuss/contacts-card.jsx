@@ -8,7 +8,7 @@ export default function ContactsCard({ lang }) {
             className="bg-white rounded-xl px-7.5 py-6 w-full"
             style={ { boxShadow: "0px 4px 15px 0px #22262D0D" } }
         >
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                 <p className="max-w-148.25 font-medium text-primary">{ $t('project_form.contacts_card', lang) }</p>
                 <div className="flex items-center gap-2.5">
                     <LinkButton
