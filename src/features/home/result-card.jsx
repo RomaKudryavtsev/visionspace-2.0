@@ -8,7 +8,7 @@ export default function ResultCard({
 }) {
     return (
         <div
-            className="flex flex-col gap-10 p-5 rounded-lg "
+            className="flex flex-col gap-5 lg:gap-10 p-5 rounded-lg "
             style={ { background: "#FFFFFF", border: '1px solid #F6F8FA', boxShadow: '0px 4px 15px 0px #22262D0D' } }
         >
             <div className="flex items-center gap-5">
@@ -25,7 +25,7 @@ export default function ResultCard({
                     />
                 </div>
                 <div className="flex flex-col gap-1">
-                    <span className="text-primary text-2xl font-semibold">{ title }</span>
+                    <span className="text-primary text-xl lg:text-2xl font-normal lg:font-semibold">{ title }</span>
                     <span className="text-gray font-medium">{ description }</span>
                 </div>
             </div>

@@ -18,7 +18,8 @@ function ResultContent({ result, lang }) {
                     alt="Client Growth"
                     width={ 176 }
                     height={ 93 }
-                    style={ { width: 'auto', height: 'auto' } }
+                    className="w-40 lg:w-44"
+                    style={ { height: 'auto' } }
                 />
             </div>
         );
@@ -54,7 +55,8 @@ function ResultContent({ result, lang }) {
                         alt="Control"
                         width={ 142 }
                         height={ 64 }
-                        style={ { width: 'auto', height: 'auto' } }
+                        className="w-30 lg:w-35.5"
+                        style={ { height: 'auto' } }
                     />
                 </div>
             </div>
@@ -78,7 +80,8 @@ function ResultContent({ result, lang }) {
                         alt="Scalability"
                         width={ 142 }
                         height={ 64 }
-                        style={ { width: 'auto', height: 'auto' } }
+                        className="w-30 lg:w-35.5"
+                        style={ { height: 'auto' } }
                     />
                 </div>
             </div>
@@ -97,8 +100,8 @@ export default function ResultSection({ lang }) {
                     <div className="py-2.5 px-3 bg-white rounded-sm self-start">
                         <span className="font-medium text-graphite">{ $t("results.what_you_get", lang) }</span>
                     </div>
-                    <h2 className="text-5xl text-primary font-semibold">{ $t("results.result", lang) }</h2>
-                    <p className="text-graphite text-lg">{ $t("results.description", lang) }</p>
+                    <h2 className="text-3xl lg:text-5xl text-primary font-semibold">{ $t("results.result", lang) }</h2>
+                    <p className="text-graphite text-base lg:text-lg">{ $t("results.description", lang) }</p>
                 </div>
                 {/* 2x2 grid */ }
                 <div className="grid grid-col-1 lg:grid-cols-2 gap-5">
@@ -108,7 +111,7 @@ export default function ResultSection({ lang }) {
                                 key={ result }
                                 title={ $t(`results.metrics.${result}.title`, lang) }
                                 description={ $t(`results.metrics.${result}.description`, lang) }
-                                icon={ `/${result}.svg` }
+                                icon={ `/${result}` + '.svg' }
                                 content={ <ResultContent result={ result } lang={ lang } /> }
                             />
                         ))
