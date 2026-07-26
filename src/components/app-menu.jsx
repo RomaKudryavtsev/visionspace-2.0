@@ -2,7 +2,19 @@
 
 import { useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useMenu } from "@/store/global.store";
+import LinkButton from "@/components/link-button";
+import ArrowIcon from "@/components/arrow-icon";
+import { $t } from "@/utils/lang.utils";
+
+const NAV_ITEMS = [
+    { key: "about", href: "about", label: 'menu.about_us' }, // "О нас" — new translation key, no existing source
+    { key: "lead_generation", href: "lead-generation", label: "menu.lead_generation" },
+    { key: "development", href: "development", label: "menu.development" },
+    { key: "reputation", href: "reputation", label: "menu.reputation" },
+    { key: "faq", href: "faq", label: 'menu.faq' }, // "FAQ" — new translation key, no existing source
+];
 
 export default function AppMenu({ lang }) {
     const { isOpen, closeMenu } = useMenu();
@@ -27,7 +39,7 @@ export default function AppMenu({ lang }) {
     return (
         <div
             className={
-                "fixed inset-0 z-50 flex flex-col bg-white text-graphite " +
+                "fixed inset-0 z-50 flex flex-col bg-soft-surface text-graphite " +
                 "max-w-md mx-auto " +
                 "transition-all duration-300 ease-in-out " +
                 "lg:hidden " +
@@ -41,7 +53,7 @@ export default function AppMenu({ lang }) {
             aria-label="Mobile navigation menu"
         >
             {/* Header row */ }
-            <div className="flex items-center justify-between p-4">
+            <div className="flex items-center justify-between p-4 bg-white">
                 <Image
                     src="/logo-default.svg"
                     alt="VisionSpace Logo"
@@ -51,26 +63,51 @@ export default function AppMenu({ lang }) {
                 />
                 <button
                     onClick={ closeMenu }
-                    className="p-2"
                     aria-label="Close menu"
                 >
                     <Image
                         src="/close.svg"
                         alt="Close"
-                        width={ 24 }
-                        height={ 24 }
+                        width={ 20 }
+                        height={ 20 }
                     />
                 </button>
             </div>
-
-            {/* Content slot — fill this with nav links, buttons, etc. */ }
+            {/* Nav links */ }
             <nav className="flex-1 overflow-y-auto px-4 py-6">
-                {/* TODO: Add menu items here */ }
+                <ul className="flex flex-col">
+                    { NAV_ITEMS.map((item, index) => (
+                        <li
+                            key={ item.key }
+                            className={ index < NAV_ITEMS.length - 1 ? "border-b border-border-gray" : "" }
+                        >
+                            <Link
+                                href={ `/${lang}#${item.href}` }
+                                onClick={ closeMenu }
+                                className="block py-4 text-2xl font-semibold text-primary"
+                            >
+                                { item.label ? $t(item.label, lang) : $t(`nav.${item.key}`, lang) }
+                            </Link>
+                        </li>
+                    )) }
+                </ul>
             </nav>
-
-            {/* Footer slot */ }
-            <div className="p-4 border-t border-border-gray">
-                {/* TODO: Add footer actions here (LangSwitcher, CTA, etc.) */ }
+            {/* Footer actions */ }
+            <div className="p-4 flex flex-col gap-3">
+                <LinkButton href={ `/${lang}/discuss` } onClick={ closeMenu } className="w-full">
+                    <div className="flex items-center justify-center gap-2.5">
+                        <span className="text-white">{ $t('common.discuss_project', lang) }</span>
+                        <ArrowIcon />
+                    </div>
+                </LinkButton>
+                <div className="grid grid-cols-2 gap-3">
+                    <LinkButton href="https://wa.me/YOUR_NUMBER" dark={ false } onClick={ closeMenu } className="w-full text-center bg-border-gray!">
+                        WhatsApp
+                    </LinkButton>
+                    <LinkButton href="https://t.me/YOUR_HANDLE" dark={ false } onClick={ closeMenu } className="w-full text-center bg-border-gray!">
+                        Telegram
+                    </LinkButton>
+                </div>
             </div>
         </div>
     );
