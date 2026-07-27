@@ -26,9 +26,9 @@ const DIRECTIONS = [
 
 export default function ProjectForm({ lang }) {
     const icons = ([
-        <Image key="lead-generation" src="/lead_generation.svg" alt="Lead Generation" width={ 24 } height={ 24 } />,
-        <Image key="development" src="/development.svg" alt="Development" width={ 24 } height={ 24 } />,
-        <Image key="reputation" src="/reputation.svg" alt="Reputation" width={ 24 } height={ 24 } />,
+        <Image key="lead-generation" src="/lead_generation.svg" alt="Lead Generation" width={ 24 } height={ 24 } style={ { width: 'auto', height: 'auto' } } />,
+        <Image key="development" src="/development.svg" alt="Development" width={ 24 } height={ 24 } style={ { width: 'auto', height: 'auto' } } />,
+        <Image key="reputation" src="/reputation.svg" alt="Reputation" width={ 24 } height={ 24 } style={ { width: 'auto', height: 'auto' } } />,
     ]);
 
     const {
