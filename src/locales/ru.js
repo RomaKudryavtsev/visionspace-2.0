@@ -177,8 +177,10 @@ export const ru = {
         business_placeholder: "Название сферы бизнеса",
         budget_label: "Бюджет на рекламу (примерно)",
         budget_placeholder: "Введите бюджет",
-        contacts_label: "Контакты",
-        contacts_placeholder: "Введите телефон или email",
+        email_label: "Email",
+        email_placeholder: "Введите email",
+        phone_label: "Телефон",
+        phone_placeholder: "Введите телефон в международном формате (+972555555555)",
     },
     not_found: {
         title: "Страница не найдена",

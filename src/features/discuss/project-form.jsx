@@ -167,10 +167,16 @@ export default function ProjectForm({ lang }) {
                     inputProps={ register('budget') }
                 />
                 <Field
-                    label={ $t('project_form.contacts_label', lang) }
-                    placeholder={ $t('project_form.contacts_placeholder', lang) }
-                    error={ errors.contacts }
-                    inputProps={ register('contacts', { required: true }) }
+                    label={ $t('project_form.email_label', lang) }
+                    placeholder={ $t('project_form.email_placeholder', lang) }
+                    error={ errors.email }
+                    inputProps={ register('email', { required: true }) }
+                />
+                <Field
+                    label={ $t('project_form.phone_label', lang) }
+                    placeholder={ $t('project_form.phone_placeholder', lang) }
+                    error={ errors.phone }
+                    inputProps={ register('phone', { required: true }) }
                 />
                 <button
                     type="submit"
