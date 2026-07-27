@@ -1,5 +1,6 @@
 import { Manrope } from "next/font/google";
 import LayoutWrapper from "@/components/layout-wrapper";
+import { $t } from "@/utils/lang.utils";
 import "../globals.css";
 
 const manrope = Manrope({
@@ -7,17 +8,22 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "VisionSpace",
-  description: "VisionSpace - leads generation, software development, and reputation management for businesses and individuals.",
-};
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+
+  return {
+    title: $t("metadata.title", lang),
+    description: $t("metadata.description", lang),
+    keywords: $t("metadata.keywords", lang),
+  };
+}
 
 export default async function RootLayout({ children, params }) {
-    const { lang } = await params;
+  const { lang } = await params;
 
   return (
     <html
-      lang="en"
+      lang={ lang }
       className={ `${manrope.variable} h-full antialiased` }
     >
       <body className="min-h-full flex flex-col">

@@ -1,4 +1,9 @@
 export const en = {
+    metadata: {
+        title: "VisionSpace",
+        description: "VisionSpace - lead generation, development, and reputation management for businesses and individuals.",
+        keywords: "lead generation, development, reputation management, marketing, digital products, customer acquisition, business growth",
+    },
     common: {
         discuss_project: 'Discuss project',
         details: 'Details',

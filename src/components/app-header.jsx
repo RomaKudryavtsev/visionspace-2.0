@@ -13,13 +13,17 @@ export default function AppHeader({ lang = 'ru' }) {
     return (
         <header className="container mx-auto p-4 flex justify-between items-center">
             <div className="flex items-center gap-20">
-                <Image
-                    src="/logo-default.svg"
-                    alt="VisionSpace Logo"
-                    width={ 161 }
-                    height={ 31 }
-                    loading="eager"
-                />
+                <Link
+                    href={ `/${lang}/` }
+                >
+                    <Image
+                        src="/logo-default.svg"
+                        alt="VisionSpace Logo"
+                        width={ 161 }
+                        height={ 31 }
+                        loading="eager"
+                    />
+                </Link>
                 <nav className="hidden lg:flex gap-9 items-center" style={ { listStyleType: 'none' } }>
                     <li>
                         <Link

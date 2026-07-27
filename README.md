@@ -39,7 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## TODO
 
-- localize metadata
-- add localized sitemap
-- add robots.txt
 - connect to crm

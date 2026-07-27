@@ -1,4 +1,9 @@
 export const ru = {
+    metadata: {
+        title: "VisionSpace",
+        description: "VisionSpace - лидогенерация, разработка и управление репутацией для бизнеса и частных лиц.",
+        keywords: "лидогенерация, разработка, управление репутацией, маркетинг, digital-продукты, привлечение клиентов, рост бизнеса",
+    },
     common: {
         discuss_project: 'Обсудить проект',
         details: 'Подробнее',
