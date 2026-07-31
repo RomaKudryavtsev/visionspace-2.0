@@ -3,6 +3,9 @@ import LinkButton from "@/components/link-button";
 import ArrowIcon from "@/components/arrow-icon";
 import { $t } from "@/utils/lang.utils";
 
+const WA_LINK = process.env.NEXT_PUBLIC_WA_LINK;
+const TG_LINK = process.env.NEXT_PUBLIC_TG_LINK;
+
 export default function HeroSection({ lang = 'ru' }) {
     return (
         <section className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
@@ -22,12 +25,16 @@ export default function HeroSection({ lang = 'ru' }) {
                         </div>
                     </LinkButton>
                     <div className="grid grid-cols-2 gap-4 lg:contents">
-                        <LinkButton href="https://wa.me/YOUR_NUMBER" dark={ false } className="w-full lg:w-auto text-center">
-                            WhatsApp
-                        </LinkButton>
-                        <LinkButton href="https://t.me/YOUR_HANDLE" dark={ false } className="w-full lg:w-auto text-center">
-                            Telegram
-                        </LinkButton>
+                        { WA_LINK && (
+                            <LinkButton href={ WA_LINK } dark={ false } className="w-full lg:w-auto text-center">
+                                WhatsApp
+                            </LinkButton>
+                        ) }
+                        { TG_LINK && (
+                            <LinkButton href={ TG_LINK } dark={ false } className="w-full lg:w-auto text-center">
+                                Telegram
+                            </LinkButton>
+                        ) }
                     </div>
                 </div>
             </div>

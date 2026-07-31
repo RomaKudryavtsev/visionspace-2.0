@@ -16,6 +16,9 @@ const NAV_ITEMS = [
     { key: "faq", href: "faq", label: 'menu.faq' }, // "FAQ" — new translation key, no existing source
 ];
 
+const WA_LINK = process.env.NEXT_PUBLIC_WA_LINK;
+const TG_LINK = process.env.NEXT_PUBLIC_TG_LINK;
+
 export default function AppMenu({ lang }) {
     const { isOpen, closeMenu } = useMenu();
 
@@ -101,12 +104,16 @@ export default function AppMenu({ lang }) {
                     </div>
                 </LinkButton>
                 <div className="grid grid-cols-2 gap-3">
-                    <LinkButton href="https://wa.me/YOUR_NUMBER" dark={ false } onClick={ closeMenu } className="w-full text-center bg-border-gray!">
-                        WhatsApp
-                    </LinkButton>
-                    <LinkButton href="https://t.me/YOUR_HANDLE" dark={ false } onClick={ closeMenu } className="w-full text-center bg-border-gray!">
-                        Telegram
-                    </LinkButton>
+                    { WA_LINK && (
+                        <LinkButton href={ WA_LINK } dark={ false } onClick={ closeMenu } className="w-full text-center bg-border-gray!">
+                            WhatsApp
+                        </LinkButton>
+                    ) }
+                    { TG_LINK && (
+                        <LinkButton href={ TG_LINK } dark={ false } onClick={ closeMenu } className="w-full text-center bg-border-gray!">
+                            Telegram
+                        </LinkButton>
+                    ) }
                 </div>
             </div>
         </div>
