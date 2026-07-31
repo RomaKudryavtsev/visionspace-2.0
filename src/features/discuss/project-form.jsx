@@ -128,7 +128,7 @@ export default function ProjectForm({ lang }) {
                                             type="button"
                                             onClick={ () => field.onChange(direction.value) }
                                             aria-pressed={ isSelected }
-                                            className={ `flex-1 rounded-sm p-3 text-sm font-medium transition-colors ${isSelected ? 'bg-[#3158E8] text-white' : 'text-primary'
+                                            className={ `flex-1 rounded-sm p-2 text-sm font-medium transition-colors ${isSelected ? 'bg-[#3158E8] text-white' : 'text-primary'
                                                 }` }
                                         >
                                             { $t(direction.titleKey, lang) }
