@@ -35,7 +35,7 @@ export default function AppHeader({ lang = 'ru' }) {
                     </li>
                     <li>
                         <Link
-                            href={ `/${lang}/` }
+                            href={ `/${lang}/lead-generation` }
                             className="text-graphite hover:underline"
                         >
                             <span>{ $t('menu.lead_generation', lang) }</span>

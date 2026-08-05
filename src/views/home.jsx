@@ -1,4 +1,4 @@
-import DiscussSection from "@/features/home/discuss-section";
+import DiscussSection from "@/features/common/discuss-section";
 import HeroSection from "@/features/home/hero-section";
 import ProcessSection from "@/features/home/process-section";
 import ResultSection from "@/features/home/result-section";

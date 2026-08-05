@@ -183,8 +183,14 @@ export const en = {
         phone_placeholder: "Enter phone number in international format (+972555555555)",
     },
     not_found: {
-        title: "Страница не найдена",
-        message: "К сожалению, запрашиваемая страница не существует.",
-        home_button: "Вернуться на главную",
+        title: "Page Not Found",
+        message: "Unfortunately, the requested page does not exist.",
+        home_button: "Return to Home",
+    },
+    lead_generation: {
+        hero: {
+            title: "We bring clients to your business at a predictable cost",
+            subtitle: "We build a lead generation system: advertising, funnels, and analytics — turnkey"
+        }
     }
 }

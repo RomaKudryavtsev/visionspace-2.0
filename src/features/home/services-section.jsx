@@ -129,14 +129,18 @@ function ServiceContent({ code, lang }) {
     return null;
 }
 export default function ServicesSection({ lang }) {
-    const services_codes = ['lead_generation', 'development', 'reputation'];
+    const services_codes = [
+        { code: 'lead_generation', href: `/${lang}/lead-generation` }, 
+        { code: 'development', href: `/${lang}/development` }, 
+        { code: 'reputation', href: `/${lang}/reputation` }
+    ];
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const cards = services_codes.map(code => ({
+    const cards = services_codes.map(({ code, href }) => ({
         title: $t(`services.${code}.title`, lang),
         description: $t(`services.${code}.description`, lang),
         icon: `/${code}` + '.svg',
-        link: `/${lang}/`,
+        link: href,
         content: (<ServiceContent code={ code } lang={ lang } />),
     }));
 
