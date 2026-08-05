@@ -1,6 +1,8 @@
 import Image from "next/image";
 import LinkButton from "@/components/link-button";
 import ArrowIcon from "@/components/arrow-icon";
+import { PeopleIcon } from "@/components/icons/people-icon";
+import { TargetIcon } from "@/components/icons/target-icon";
 import { $t } from "@/utils/lang.utils";
 
 const WA_LINK = process.env.NEXT_PUBLIC_WA_LINK;
@@ -42,8 +44,19 @@ export default function HeroSection({ lang = 'ru' }) {
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-7.5 items-center">
-
+                <div className="flex flex-col lg:flex-row gap-3.5 lg:gap-7.5 lg:items-center">
+                    <div className="flex items-center gap-2.5">
+                        <div className="rounded-md p-2.5 border border-border-gray">
+                            <PeopleIcon size={ 16 } className="text-gray" />
+                        </div>
+                        <span className="text-sm text-gray font-medium">{ $t('lead_generation.hero.niche', lang) }</span>
+                    </div>
+                    <div className="flex items-center gap-2.5">
+                        <div className="rounded-md p-2.5 border border-border-gray">
+                            <TargetIcon size={ 16 } className="text-gray" />
+                        </div>
+                        <span className="text-sm text-gray font-medium">{ $t('lead_generation.hero.focus', lang) }</span>
+                    </div>
                 </div>
             </div>
             { /* Image */ }

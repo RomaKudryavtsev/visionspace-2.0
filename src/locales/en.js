@@ -190,7 +190,9 @@ export const en = {
     lead_generation: {
         hero: {
             title: "We bring clients to your business at a predictable cost",
-            subtitle: "We build a lead generation system: advertising, funnels, and analytics — turnkey"
+            subtitle: "We build a lead generation system: advertising, funnels, and analytics — turnkey",
+            niche: "We work with various niches",
+            focus: "Focus on ROI, not traffic"
         }
     }
 }
