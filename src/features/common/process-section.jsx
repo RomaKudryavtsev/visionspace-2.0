@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import ProcessCard from "@/features/home/process-card";
+import ProcessCard from "@/features/common/process-card";
 import { $t } from "@/utils/lang.utils";
 
 function ProcessConnector({ orientation = "horizontal" }) {

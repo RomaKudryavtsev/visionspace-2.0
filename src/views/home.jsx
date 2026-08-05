@@ -1,6 +1,6 @@
 import DiscussSection from "@/features/common/discuss-section";
 import HeroSection from "@/features/home/hero-section";
-import ProcessSection from "@/features/home/process-section";
+import ProcessSection from "@/features/common/process-section";
 import ResultSection from "@/features/home/result-section";
 import ServicesSection from "@/features/home/services-section";
 import WhyUsSection from "@/features/home/why-us-section";
