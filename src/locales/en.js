@@ -193,6 +193,20 @@ export const en = {
             subtitle: "We build a lead generation system: advertising, funnels, and analytics — turnkey",
             niche: "We work with various niches",
             focus: "Focus on ROI, not traffic"
+        },
+        subhero: {
+            title: "Why advertising doesn't work",
+            subtitle: "Most companies face the same problems. We identify weak points and fix them.",
+            problems: {
+                price_title: "Expensive leads",
+                price_desc: "budget increases, but the cost per lead doesn't decrease",
+                lack_system_title: "No system",
+                lack_system_desc: "marketing works chaotically",
+                weak_conversion_title: "Weak conversion",
+                weak_conversion_desc: "there is traffic, but no leads",
+                no_analytics_title: "No analytics",
+                no_analytics_desc: "unclear what brings money"
+            }
         }
     }
 }
