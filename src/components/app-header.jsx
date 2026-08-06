@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import LangSwitcher from './lang-switcher';
-import ArrowIcon from './arrow-icon';
+import ArrowIcon from './icons/arrow-icon';
 import LinkButton from './link-button';
 import { $t } from '@/utils/lang.utils';
 import { useMenu } from '@/store/global.store';

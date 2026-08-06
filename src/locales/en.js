@@ -229,6 +229,28 @@ export const en = {
                     description: 'we reduce the cost per lead and scale'
                 }
             }
+        },
+        work_scope: {
+            title: "What is included in the work",
+            description: "We comprehensively build a lead generation system - from advertising to analytics and continuous improvements.",
+            items: {
+                ads: {
+                    title: "Advertising",
+                    description: "Google Ads, Meta Ads, campaign launch and optimization"
+                },
+                funnels: {
+                    title: "Funnels and Pages",
+                    description: "landing pages, quizzes, conversion improvement"
+                },
+                analytics: {
+                    title: "Analytics",
+                    description: "tracking setup, end-to-end analytics"
+                },
+                testing: {
+                    title: "Testing",
+                    description: "A/B tests, hypotheses, continuous improvements"
+                }
+            }
         }
     }
 }

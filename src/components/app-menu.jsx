@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMenu } from "@/store/global.store";
 import LinkButton from "@/components/link-button";
-import ArrowIcon from "@/components/arrow-icon";
+import ArrowIcon from "@/components/icons/arrow-icon";
 import { $t } from "@/utils/lang.utils";
 
 const NAV_ITEMS = [
