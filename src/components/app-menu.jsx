@@ -85,7 +85,7 @@ export default function AppMenu({ lang }) {
                             className={ index < NAV_ITEMS.length - 1 ? "border-b border-border-gray" : "" }
                         >
                             <Link
-                                href={ `/${lang}#${item.href}` }
+                                href={ `/${lang}/${item.href}` }
                                 onClick={ closeMenu }
                                 className="block py-4 text-2xl font-semibold text-primary"
                             >
