@@ -274,6 +274,11 @@ export const en = {
                     description: "we work as a partner, not a contractor"
                 }
             }
+        },
+        what_you_get: {
+            badge: "What You Get",
+            title: "Systematic Lead Generation Instead of One-Time Launches",
+            description: "You get a working client acquisition system, not one-time actions."
         }
     }
 }

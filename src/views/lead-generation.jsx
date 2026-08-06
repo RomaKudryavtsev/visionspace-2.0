@@ -1,5 +1,6 @@
 import HeroSection from '@/features/lead-generation/hero-section';
 import SubheroSection from '@/features/lead-generation/subhero-section';
+import WhatYouGetSection from '@/features/lead-generation/what-you-get-section';
 import WorkScopeSection from "@/features/common/work-scope-section";
 import ProcessSection from "@/features/common/process-section";
 import ApproachSection from "@/features/common/approach-section";
@@ -11,6 +12,7 @@ export default function LeadGenerationPage({ lang }) {
         <div>
             <HeroSection lang={ lang } />
             <SubheroSection lang={ lang } />
+            <WhatYouGetSection lang={ lang } />
             <WorkScopeSection lang={ lang } />
             <ProcessSection
                 lang={ lang }
