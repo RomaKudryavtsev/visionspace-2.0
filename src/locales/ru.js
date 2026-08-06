@@ -207,6 +207,28 @@ export const ru = {
                 no_analytics_title: "Нет аналитики",
                 no_analytics_desc: "непонятно, что приносит деньги"
             }
+        },
+        process: {
+            title: "Пошаговая система роста",
+            subtitle: "Прозрачный процесс от анализа до масштабирования результатов.",
+            steps: {
+                analysis: {
+                    title: 'Анализ',
+                    description: 'изучаем нишу, конкурентов и экономику'
+                },
+                strategy: {
+                    title: 'Стратегия',
+                    description: 'формируем модель привлечения клиентов'
+                },
+                implementation: {
+                    title: 'Реализация',
+                    description: 'запускаем рекламу и воронки'
+                },
+                optimization: {
+                    title: 'Оптимизация',
+                    description: 'снижаем стоимость лида и масштабируем'
+                }
+            }
         }
     }
 }

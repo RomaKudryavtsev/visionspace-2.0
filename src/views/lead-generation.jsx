@@ -2,13 +2,20 @@ import DiscussSection from "@/features/common/discuss-section";
 import HeroSection from '@/features/lead-generation/hero-section';
 import SubheroSection from '@/features/lead-generation/subhero-section';
 import ProcessSection from "@/features/common/process-section";
+import { $t } from "@/utils/lang.utils";
 
 export default function LeadGenerationPage({ lang }) {
     return (
         <div>
             <HeroSection lang={ lang } />
             <SubheroSection lang={ lang } />
-            <ProcessSection lang={ lang } />
+            <ProcessSection
+                lang={ lang }
+                isDark={ false }
+                title={ $t('lead_generation.process.title', lang) }
+                subtitle={ $t('lead_generation.process.subtitle', lang) }
+                page="lead_generation"
+            />
             <DiscussSection lang={ lang } />
         </div>
     );

@@ -207,6 +207,28 @@ export const en = {
                 no_analytics_title: "No analytics",
                 no_analytics_desc: "unclear what brings money"
             }
+        },
+        process: {
+            title: "Step-by-Step Growth System",
+            subtitle: "A transparent process from analysis to scaling results.",
+            steps: {
+                analysis: {
+                    title: 'Analysis',
+                    description: 'we study the niche, competitors, and economics'
+                },
+                strategy: {
+                    title: 'Strategy',
+                    description: 'we form a client acquisition model'
+                },
+                implementation: {
+                    title: 'Implementation',
+                    description: 'we launch advertising and funnels'
+                },
+                optimization: {
+                    title: 'Optimization',
+                    description: 'we reduce the cost per lead and scale'
+                }
+            }
         }
     }
 }
