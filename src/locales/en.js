@@ -251,6 +251,29 @@ export const en = {
                     description: "A/B tests, hypotheses, continuous improvements"
                 }
             }
+        },
+        approach: {
+            badge: "Why VisionSpace",
+            title: "An approach that delivers results",
+            description: "We combine strategy, creativity, and technology to ensure that every project brings measurable growth and sustainable impact for your business.",
+            items: {
+                profit_focus: {
+                    title: "Focus on Profit",
+                    description: "it's not traffic that matters, but money"
+                },
+                systematic: {
+                    title: "Systematic Approach",
+                    description: "we build marketing as a system"
+                },
+                experience: {
+                    title: "Experience",
+                    description: "real projects and cases"
+                },
+                step_into: {
+                    title: "Immersion in Business",
+                    description: "we work as a partner, not a contractor"
+                }
+            }
         }
     }
 }
