@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Controller, useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { useSubmitLead } from '@/hooks/lead.hooks';
+import FormInput from '@/components/form-input';
 import { $t } from "@/utils/lang.utils";
 
 const DIRECTIONS = [
@@ -148,31 +149,31 @@ export default function ProjectForm({ lang }) {
                 <p className="text-lg text-primary">
                     2. { $t('project_form.step2_title', lang) }
                 </p>
-                <Field
+                <FormInput
                     label={ $t('project_form.name_label', lang) }
                     placeholder={ $t('project_form.name_placeholder', lang) }
                     error={ errors.name }
                     inputProps={ register('name', { required: true }) }
                 />
-                <Field
+                <FormInput
                     label={ $t('project_form.business_label', lang) }
                     placeholder={ $t('project_form.business_placeholder', lang) }
                     error={ errors.businessArea }
                     inputProps={ register('businessArea', { required: true }) }
                 />
-                <Field
+                <FormInput
                     label={ $t('project_form.budget_label', lang) }
                     placeholder={ $t('project_form.budget_placeholder', lang) }
                     error={ errors.budget }
                     inputProps={ register('budget') }
                 />
-                <Field
+                <FormInput
                     label={ $t('project_form.email_label', lang) }
                     placeholder={ $t('project_form.email_placeholder', lang) }
                     error={ errors.email }
                     inputProps={ register('email', { required: true }) }
                 />
-                <Field
+                <FormInput
                     label={ $t('project_form.phone_label', lang) }
                     placeholder={ $t('project_form.phone_placeholder', lang) }
                     error={ errors.phone }
@@ -189,19 +190,5 @@ export default function ProjectForm({ lang }) {
                 </button>
             </div>
         </form>
-    );
-}
-
-function Field({ label, placeholder, error, inputProps }) {
-    return (
-        <label className="flex flex-col gap-2.5 text-sm text-gray font-normal lg:font-medium">
-            { label }
-            <input
-                { ...inputProps }
-                placeholder={ placeholder }
-                className={ `rounded-sm border bg-white lg:bg-soft-surface px-3.5 py-3 font-medium text-primary outline-none transition-colors placeholder:text-[#7A849366] focus:border-[#3158E8] focus:bg-white ${error ? 'border-red-400' : 'border-transparent'
-                    }` }
-            />
-        </label>
     );
 }
