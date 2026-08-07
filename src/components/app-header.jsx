@@ -43,7 +43,7 @@ export default function AppHeader({ lang = 'ru' }) {
                     </li>
                     <li>
                         <Link
-                            href={ `/${lang}/` }
+                            href={ `/${lang}/software` }
                             className="text-graphite hover:underline"
                         >
                             <span>{ $t('menu.development', lang) }</span>

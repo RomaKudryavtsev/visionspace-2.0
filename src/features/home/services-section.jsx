@@ -123,7 +123,7 @@ function ServiceContent({ code, lang }) {
 export default function ServicesSection({ lang }) {
     const services_codes = [
         { code: 'lead_generation', href: `/${lang}/lead-generation` }, 
-        { code: 'development', href: `/${lang}/development` }, 
+        { code: 'development', href: `/${lang}/software` }, 
         { code: 'reputation', href: `/${lang}/reputation` }
     ];
     const [activeIndex, setActiveIndex] = useState(0);

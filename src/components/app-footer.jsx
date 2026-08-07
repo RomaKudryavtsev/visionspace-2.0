@@ -23,7 +23,7 @@ export default function AppFooter({ lang = 'ru' }) {
                                     <span>{ $t('menu.lead_generation', lang) }</span>
                                 </Link>
                                 <Link
-                                    href={ `/${lang}/` }
+                                    href={ `/${lang}/software` }
                                     className="text-graphite"
                                 >
                                     <span>{ $t('menu.development', lang) }</span>

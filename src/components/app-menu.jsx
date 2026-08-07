@@ -11,7 +11,7 @@ import { $t } from "@/utils/lang.utils";
 const NAV_ITEMS = [
     { key: "about", href: "/", label: 'menu.about_us' }, // "О нас" — new translation key, no existing source
     { key: "lead_generation", href: "lead-generation", label: "menu.lead_generation" },
-    { key: "development", href: "/", label: "menu.development" },
+    { key: "development", href: "software", label: "menu.development" },
     { key: "reputation", href: "/", label: "menu.reputation" },
     { key: "faq", href: "/", label: 'menu.faq' }, // "FAQ" — new translation key, no existing source
 ];
