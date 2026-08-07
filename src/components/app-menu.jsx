@@ -5,15 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMenu } from "@/store/global.store";
 import LinkButton from "@/components/link-button";
-import ArrowIcon from "@/components/arrow-icon";
+import ArrowIcon from "@/components/icons/arrow-icon";
 import { $t } from "@/utils/lang.utils";
 
 const NAV_ITEMS = [
-    { key: "about", href: "about", label: 'menu.about_us' }, // "О нас" — new translation key, no existing source
+    { key: "about", href: "/", label: 'menu.about_us' }, // "О нас" — new translation key, no existing source
     { key: "lead_generation", href: "lead-generation", label: "menu.lead_generation" },
-    { key: "development", href: "development", label: "menu.development" },
-    { key: "reputation", href: "reputation", label: "menu.reputation" },
-    { key: "faq", href: "faq", label: 'menu.faq' }, // "FAQ" — new translation key, no existing source
+    { key: "development", href: "/", label: "menu.development" },
+    { key: "reputation", href: "/", label: "menu.reputation" },
+    { key: "faq", href: "/", label: 'menu.faq' }, // "FAQ" — new translation key, no existing source
 ];
 
 const WA_LINK = process.env.NEXT_PUBLIC_WA_LINK;
@@ -85,7 +85,7 @@ export default function AppMenu({ lang }) {
                             className={ index < NAV_ITEMS.length - 1 ? "border-b border-border-gray" : "" }
                         >
                             <Link
-                                href={ `/${lang}#${item.href}` }
+                                href={ `/${lang}/${item.href}` }
                                 onClick={ closeMenu }
                                 className="block py-4 text-2xl font-semibold text-primary"
                             >

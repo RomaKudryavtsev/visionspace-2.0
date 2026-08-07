@@ -1,6 +1,6 @@
 import Image from "next/image";
 import LinkButton from "@/components/link-button";
-import ArrowIcon from "@/components/arrow-icon";
+import ArrowIcon from "@/components/icons/arrow-icon";
 import { $t } from "@/utils/lang.utils";
 
 const WA_LINK = process.env.NEXT_PUBLIC_WA_LINK;

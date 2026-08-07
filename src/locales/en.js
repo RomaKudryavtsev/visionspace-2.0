@@ -183,8 +183,130 @@ export const en = {
         phone_placeholder: "Enter phone number in international format (+972555555555)",
     },
     not_found: {
-        title: "Страница не найдена",
-        message: "К сожалению, запрашиваемая страница не существует.",
-        home_button: "Вернуться на главную",
+        title: "Page Not Found",
+        message: "Unfortunately, the requested page does not exist.",
+        home_button: "Return to Home",
+    },
+    lead_generation: {
+        hero: {
+            title: "We bring clients to your business at a predictable cost",
+            subtitle: "We build a lead generation system: advertising, funnels, and analytics — turnkey",
+            niche: "We work with various niches",
+            focus: "Focus on ROI, not traffic"
+        },
+        subhero: {
+            title: "Why advertising doesn't work",
+            subtitle: "Most companies face the same problems. We identify weak points and fix them.",
+            problems: {
+                price_title: "Expensive leads",
+                price_desc: "budget increases, but the cost per lead doesn't decrease",
+                lack_system_title: "No system",
+                lack_system_desc: "marketing works chaotically",
+                weak_conversion_title: "Weak conversion",
+                weak_conversion_desc: "there is traffic, but no leads",
+                no_analytics_title: "No analytics",
+                no_analytics_desc: "unclear what brings money"
+            }
+        },
+        process: {
+            title: "Step-by-Step Growth System",
+            subtitle: "A transparent process from analysis to scaling results.",
+            steps: {
+                analysis: {
+                    title: 'Analysis',
+                    description: 'we study the niche, competitors, and economics'
+                },
+                strategy: {
+                    title: 'Strategy',
+                    description: 'we form a client acquisition model'
+                },
+                implementation: {
+                    title: 'Implementation',
+                    description: 'we launch advertising and funnels'
+                },
+                optimization: {
+                    title: 'Optimization',
+                    description: 'we reduce the cost per lead and scale'
+                }
+            }
+        },
+        work_scope: {
+            title: "What is included in the work",
+            description: "We comprehensively build a lead generation system - from advertising to analytics and continuous improvements.",
+            items: {
+                ads: {
+                    title: "Advertising",
+                    description: "Google Ads, Meta Ads, campaign launch and optimization"
+                },
+                funnels: {
+                    title: "Funnels and Pages",
+                    description: "landing pages, quizzes, conversion improvement"
+                },
+                analytics: {
+                    title: "Analytics",
+                    description: "tracking setup, end-to-end analytics"
+                },
+                testing: {
+                    title: "Testing",
+                    description: "A/B tests, hypotheses, continuous improvements"
+                }
+            }
+        },
+        approach: {
+            badge: "Why VisionSpace",
+            title: "An approach that delivers results",
+            description: "We combine strategy, creativity, and technology to ensure that every project brings measurable growth and sustainable impact for your business.",
+            items: {
+                profit_focus: {
+                    title: "Focus on Profit",
+                    description: "it's not traffic that matters, but money"
+                },
+                systematic: {
+                    title: "Systematic Approach",
+                    description: "we build marketing as a system"
+                },
+                experience: {
+                    title: "Experience",
+                    description: "real projects and cases"
+                },
+                step_into: {
+                    title: "Immersion in Business",
+                    description: "we work as a partner, not a contractor"
+                }
+            }
+        },
+        what_you_get: {
+            badge: "What You Get",
+            title: "Systematic Lead Generation Instead of One-Time Launches",
+            description: "You get a working client acquisition system, not one-time actions.",
+            leads_flow: {
+                title: "Leads Flow",
+                subtitle: "Stable client acquisition",
+                metrics: "Leads in 30 days",
+            },
+            lead_price_control: {
+                title: "Lead Price Control",
+                subtitle: "Understand how much a client costs",
+                metrics: "CPL in 30 days",
+            },
+            working_funnel: {
+                title: "Working Funnel",
+                subtitle: "Everything is optimized from click to application",
+                metrics: "Conversion to Application",
+                items: {
+                    shows: "Shows",
+                    clicks: "Clicks",
+                    leads: "Leads",
+                    applications: "Applications",
+                }
+            },
+            transparent_analytics: {
+                title: "Transparent Analytics",
+                subtitle: "Data-driven decisions, not guesses",
+                roi: "ROI by Projects",
+                conversions: "Conversion to Lead",
+                new_clients: "New Clients",
+            }
+        }
     }
 }

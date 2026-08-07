@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { $t } from "@/utils/lang.utils";
 import LinkButton from "@/components/link-button";
-import ArrowIcon from "@/components/arrow-icon";
+import ArrowIcon from "@/components/icons/arrow-icon";
 import WhyUsCard from "./why-us-card";
 
 export default function WhyUsSection({ lang }) {

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import LinkButton from "@/components/link-button";
-import ArrowIcon from "@/components/arrow-icon";
+import ArrowIcon from "@/components/icons/arrow-icon";
 import DiscussCard from "./discuss-card";
 import { $t } from "@/utils/lang.utils";
 

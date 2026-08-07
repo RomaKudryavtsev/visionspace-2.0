@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import ServiceCard from "./service-card";
+import GrowthMetrics from "@/components/growth-metrics";
 import { $t } from "@/utils/lang.utils";
 
 function InnerServiceTile({ title, icon, isLast }) {
@@ -43,16 +44,7 @@ function ServiceContent({ code, lang }) {
                         <span className="text-primary font-medium">{ $t('services.lead_generation.requests', lang) }</span>
                         <div className="flex gap-2.5 items-center">
                             <span className="text-primary text-xl lg:text-2xl font-normal lg:font-semibold">1 248</span>
-                            <div className="flex items-center">
-                                <Image
-                                    src="/percent-up.svg"
-                                    alt="percent up"
-                                    width={ 16 }
-                                    height={ 16 }
-                                    style={ { width: 'auto', height: 'auto' } }
-                                />
-                                <span className="text-p-green font-medium">32%</span>
-                            </div>
+                            <GrowthMetrics title="32%" />
                         </div>
                         <span className="text-graphite text-xs">{ $t('services.lead_generation.to_prev_month', lang) }</span>
                     </div>
@@ -129,14 +121,18 @@ function ServiceContent({ code, lang }) {
     return null;
 }
 export default function ServicesSection({ lang }) {
-    const services_codes = ['lead_generation', 'development', 'reputation'];
+    const services_codes = [
+        { code: 'lead_generation', href: `/${lang}/lead-generation` }, 
+        { code: 'development', href: `/${lang}/development` }, 
+        { code: 'reputation', href: `/${lang}/reputation` }
+    ];
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const cards = services_codes.map(code => ({
+    const cards = services_codes.map(({ code, href }) => ({
         title: $t(`services.${code}.title`, lang),
         description: $t(`services.${code}.description`, lang),
         icon: `/${code}` + '.svg',
-        link: `/${lang}/`,
+        link: href,
         content: (<ServiceContent code={ code } lang={ lang } />),
     }));
 

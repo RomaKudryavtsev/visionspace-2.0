@@ -7,6 +7,7 @@
   --graphite: #22262D;
   --border-gray: #cdcfd0;
   --p-green: #22B573;
+  --p-blue: #3158E8;
 }
 
 @theme inline {
@@ -17,6 +18,7 @@
   --color-graphite: var(--graphite);
   --color-border-gray: var(--border-gray);
   --color-p-green: var(--p-green);
+  --color-p-blue: var(--p-blue);
   --container-padding: 1rem;
 }
 

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import LangSwitcher from './lang-switcher';
-import ArrowIcon from './arrow-icon';
+import ArrowIcon from './icons/arrow-icon';
 import LinkButton from './link-button';
 import { $t } from '@/utils/lang.utils';
 import { useMenu } from '@/store/global.store';
@@ -35,7 +35,7 @@ export default function AppHeader({ lang = 'ru' }) {
                     </li>
                     <li>
                         <Link
-                            href={ `/${lang}/` }
+                            href={ `/${lang}/lead-generation` }
                             className="text-graphite hover:underline"
                         >
                             <span>{ $t('menu.lead_generation', lang) }</span>

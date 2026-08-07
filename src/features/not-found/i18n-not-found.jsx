@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import LinkButton from "@/components/link-button";
-import ArrowIcon from "@/components/arrow-icon";
+import ArrowIcon from "@/components/icons/arrow-icon";
 import { $t } from "@/utils/lang.utils";
 
 export default function I18nNotFound() {

@@ -17,7 +17,7 @@ export default function AppFooter({ lang = 'ru' }) {
                             <span className="text-gray text-lg">{ $t('footer.services', lang) }</span>
                             <div className="flex flex-col gap-3.5">
                                 <Link
-                                    href={ `/${lang}/` }
+                                    href={ `/${lang}/lead-generation` }
                                     className="text-graphite"
                                 >
                                     <span>{ $t('menu.lead_generation', lang) }</span>

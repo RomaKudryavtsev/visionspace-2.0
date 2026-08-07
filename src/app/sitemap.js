@@ -29,15 +29,28 @@ export default function sitemap() {
     }
 
     for (const locale of locales) {
-        urls.push({
-            url: `${SITE_URL}/${locale}/discuss`,
-            lastModified,
-            changeFrequency: "daily",
-            priority: 0.8,
-            alternates: {
-                languages: buildLanguageAlternates("/discuss"),
+        urls.push(
+            // Discuss page
+            {
+                url: `${SITE_URL}/${locale}/discuss`,
+                lastModified,
+                changeFrequency: "daily",
+                priority: 0.8,
+                alternates: {
+                    languages: buildLanguageAlternates("/discuss"),
+                },
             },
-        });
+            // Lead generation page
+            {
+                url: `${SITE_URL}/${locale}/lead-generation`,
+                lastModified,
+                changeFrequency: "daily",
+                priority: 0.8,
+                alternates: {
+                    languages: buildLanguageAlternates("/lead-generation"),
+                },
+            }
+        );
     }
 
     return urls;
