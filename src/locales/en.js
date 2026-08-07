@@ -278,7 +278,35 @@ export const en = {
         what_you_get: {
             badge: "What You Get",
             title: "Systematic Lead Generation Instead of One-Time Launches",
-            description: "You get a working client acquisition system, not one-time actions."
+            description: "You get a working client acquisition system, not one-time actions.",
+            leads_flow: {
+                title: "Leads Flow",
+                subtitle: "Stable client acquisition",
+                metrics: "Leads in 30 days",
+            },
+            lead_price_control: {
+                title: "Lead Price Control",
+                subtitle: "Understand how much a client costs",
+                metrics: "CPL in 30 days",
+            },
+            working_funnel: {
+                title: "Working Funnel",
+                subtitle: "Everything is optimized from click to application",
+                metrics: "Conversion to Application",
+                items: {
+                    shows: "Shows",
+                    clicks: "Clicks",
+                    leads: "Leads",
+                    applications: "Applications",
+                }
+            },
+            transparent_analytics: {
+                title: "Transparent Analytics",
+                subtitle: "Data-driven decisions, not guesses",
+                roi: "ROI by Projects",
+                conversions: "Conversion to Lead",
+                new_clients: "New Clients",
+            }
         }
     }
 }
