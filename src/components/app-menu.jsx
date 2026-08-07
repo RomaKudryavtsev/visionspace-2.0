@@ -9,11 +9,11 @@ import ArrowIcon from "@/components/icons/arrow-icon";
 import { $t } from "@/utils/lang.utils";
 
 const NAV_ITEMS = [
-    { key: "about", href: "about", label: 'menu.about_us' }, // "О нас" — new translation key, no existing source
+    { key: "about", href: "/", label: 'menu.about_us' }, // "О нас" — new translation key, no existing source
     { key: "lead_generation", href: "lead-generation", label: "menu.lead_generation" },
-    { key: "development", href: "development", label: "menu.development" },
-    { key: "reputation", href: "reputation", label: "menu.reputation" },
-    { key: "faq", href: "faq", label: 'menu.faq' }, // "FAQ" — new translation key, no existing source
+    { key: "development", href: "/", label: "menu.development" },
+    { key: "reputation", href: "/", label: "menu.reputation" },
+    { key: "faq", href: "/", label: 'menu.faq' }, // "FAQ" — new translation key, no existing source
 ];
 
 const WA_LINK = process.env.NEXT_PUBLIC_WA_LINK;
